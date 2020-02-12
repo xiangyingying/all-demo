@@ -1,0 +1,25 @@
+.item image{
+    width: 200rpx;height: 200rpx;
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30rpx;
+}
+.name{
+    font-size: 35rpx;
+    width: 200rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.artist{
+    font-size: 30rpx;
+    color: #666666;
+    margin-top: 10rpx;
+}
+.item{
+    margin-top: 20rpx;
+    width: 200rpx
+}

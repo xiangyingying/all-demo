@@ -1,0 +1,11 @@
+<view class="container">
+    <view class="item">
+    <slot name="icon"></slot>
+    <view class="bg">
+        <image src="{{pic}}"></image>
+    </view>
+    <view class="list">
+        <view class="name">{{name}}</view>
+    </view>
+    </view> 
+</view>

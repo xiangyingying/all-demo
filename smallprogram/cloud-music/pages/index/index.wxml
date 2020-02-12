@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="item" wx:for="{{playlists}}" wx:key="{{item}}">
+      <v-item data="{{item.name}}">
+        <image slot="icon" src="{{item.coverImgUrl}}"></image>
+        <text slot="icon">{{(item.playCount/10000)}}</text>
+      </v-item>
+  </view>
+</view>
+

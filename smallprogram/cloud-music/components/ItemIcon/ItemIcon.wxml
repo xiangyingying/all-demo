@@ -1,0 +1,4 @@
+<view>
+    <slot name="icon"></slot>
+    <view>{{data}}</view>
+</view>

@@ -1,0 +1,23 @@
+image{
+    height: 400rpx;
+}
+.container view{
+    margin-left: 100rpx;
+}
+.title{
+    font-size: 50rpx;
+    margin: 20rpx 0;
+}
+.title-nav{
+    color: #8F8F8F;
+    font-size: 35rpx;
+    margin-bottom: 20rpx;
+}
+button{
+    width: 700rpx;
+    margin: 20rpx auto;
+    font-size: 35rpx;
+    display: flex;
+    justify-content: space-between;
+    line-height:130rpx;
+}

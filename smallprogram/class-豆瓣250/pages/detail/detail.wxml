@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="item" wx:for="{{movies}}" wx:key="{{item}}">
+        <view class="item-name"><text class="name">{{item.title}}</text><text class="time">({{item.year}})</text></view>
+        <image class="item-bg" src="{{item.pic}}"></image>
+        <view class="introduce">
+            <text class="introduce-name">{{item.title}}</text><text>的剧情简介·······</text>
+            <view  class="content">{{item.summary}}</view>
+        </view>
+    </view>
+</view>

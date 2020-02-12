@@ -1,0 +1,5 @@
+<view class="container">
+    <v-item data="{{item}}" wx:for="{{data}}" wx:key="{{item}}"
+    class="{{index%2==1?'currentIndex':''}}">
+    </v-item>
+</view>

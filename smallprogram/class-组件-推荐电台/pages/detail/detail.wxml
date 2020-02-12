@@ -1,0 +1,28 @@
+<view class="container">
+    <view class="top">
+        <view class="top-bg"><image src="{{program.blurCoverUrl}}"></image></view>
+        <view class="top-right">
+            <view><text class="program">电台节目</text><text class="name">{{program.name}}</text></view>
+            <view class="right-content">
+                  <image class="note" src="/images/音乐.png"></image>
+                  <text class="guide">{{program.mainSong.name}}</text>
+                  <button><image src="/images/五角星.png"></image><text>订阅({{program.radio.subCount}})</text></button>
+            </view>
+        </view>
+    </view>
+    <view class="list">
+        <button bind:tap="handlePlay"
+         data-id="{{program.mainSong.id}}"
+         data-name="{{program.name}}"
+         class="play"><image src="{{isPlay&&prevId==program.mainSong.id?'/images/暂停 (3).png':'/images/播放 (3).png'}}"></image><text>播放13分28秒</text></button>
+        <view class="btns">
+            <button class="laud"><image src="/images/收藏 (1).png"></image>({{program.subscribedCount}})</button>
+            <button class="notice"><image src="/images/消 息1-01.png"></image>({{program.commentCount}})</button>
+            <button class="relay"><image src="/images/分享.png"></image>({{program.shareCount}})</button>
+            <button class="down"><image src="/images/下载.png"></image>下载</button>
+        </view>
+        <view class="outplay"><image src="/images/音乐 (2).png"></image><text>生成外链播放器</text></view>
+        <view class="introduce">介绍： {{program.description}}</view>
+    </view>
+</view>
+

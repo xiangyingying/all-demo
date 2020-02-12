@@ -1,0 +1,14 @@
+<view class="main-box">
+    <view clas></view>
+    <view class="input-box" bind:tap="handleClick">
+      <input type="text" placeholder="搜索的图书名称" bindfocus="onFocus" bindblur="leaveFocus" class="inp" bindinput="inputBook" value="{{searchValue}}"></input>
+      <button class="btn" bind:tap="getInput">搜索</button>
+    </view>
+    <view class="books-box">
+      <view class="book-box" wx:for="{{books}}" wx:key="item">
+        <image src="/images/bg.png" class="book-pic" />
+        <text class="book-name">{{item.first}}</text>
+      </view>
+        
+    </view>
+  </view>

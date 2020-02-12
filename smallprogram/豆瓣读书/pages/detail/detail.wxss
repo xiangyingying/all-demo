@@ -1,0 +1,40 @@
+.container{
+    margin-left: 50rpx;
+}
+.title{
+    font-size: 50rpx;
+    font-weight: bold;
+    margin-bottom: 40rpx;
+    color: #494949;
+}
+.img{
+    width: 250rpx;height: 300rpx;
+}
+.item-content image{
+    width: 250rpx;height: 300rpx;
+}
+.item-content{
+    display: flex;
+    margin-bottom: 30rpx;
+}
+.detail{
+    margin-left: 30rpx;
+    font-size: 30rpx;
+    color: #666666;
+    line-height: 50rpx;
+    margin-top: -35rpx;
+}
+.detail .artist,.detail .translator{
+    color: #3377AA
+}
+.detail text{
+    color: #111111;
+}
+.controduce-item{
+    color: #007722;
+}
+.controduce-content{
+    text-indent: 2em;
+    font-size: 30rpx;
+    margin-top: 10rpx;
+}

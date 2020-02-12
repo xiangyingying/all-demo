@@ -1,0 +1,21 @@
+<view class="container">
+   <view class="top">
+        <text class="name">{{artist.name}}</text>
+        <view>
+            <image src="{{artist.picUrl}}"></image>
+        </view>
+   </view>
+   <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab title="热门作品">
+            <Detail-item wx:for="{{hotSongs}}" wx:key="{{item.id}}" 
+                name="{{item.name}}" time="{{item.dt}}" artist="{{item.ar[0].name}}">
+           </Detail-item>
+        </van-tab>
+        <van-tab title="所有专辑">
+            <view class="all">
+                 <v-item wx:for="{{hotAlbums}}" wx:key="{{item}}" pic="{{item.picUrl}}" name="{{item.name}}">
+                 </v-item>
+            </view>
+        </van-tab>
+    </van-tabs>
+</view>

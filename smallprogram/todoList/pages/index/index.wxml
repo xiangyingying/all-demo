@@ -1,0 +1,36 @@
+<view class="content">
+   <form bind:submit="handleSubmit">
+      <view class="search">
+         <input type="text" name="keyword" placeholder="添加ToDo" />
+         <button form-type="submit">添加</button>
+      </view>
+   </form>
+</view>
+<view class="container">
+   <view class="underway">
+      <view class="title">正在进行</view>
+         <view class="row" wx:for="{{arr}}" wx:if="{{!(item.flag)}}" wx:key="item">
+            <checkbox checked="{{item.flag}}"
+            data-index="{{index}}"
+            bind:tap="handleFlag">
+            <!-- <view class="num">{{index+1}}</view> -->
+            </checkbox>
+            <view class="">{{item.name}}</view>
+            <view class="delete" bind:tap="handleToggle"><text>-</text></view>
+            <view class="number">{{arr.length}}</view>
+         </view>
+   </view>
+   <view class="finish">
+      <view class="title">已经完成</view>
+         <view class="row" wx:for="{{arr}}" wx:if="{{item.flag}}" wx:key="item">
+            <checkbox checked="{{item.flag}}"
+            bind:tap="handleFlag"
+            data-index="{{index}}">
+            <!-- <view class="num">{{index+1}}</view> -->
+            </checkbox>
+            <view class="">{{item.name}}</view>
+            <view class="delete" bind:tap="handleToggle"><text>-</text></view>
+           <view class="number">{{arr.length}}</view>
+         </view>
+   </view>
+</view>

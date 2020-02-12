@@ -1,0 +1,24 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100rpx;
+}
+.item{
+  padding: 20rpx;width: 190rpx;
+  box-shadow: 1px 1px 2px 2px rgb(175,175,175);
+  margin: 10rpx;
+}
+.item image{
+  width: 170rpx;height: 200rpx;
+  margin-left: 15rpx;
+}
+.item text{
+  font-size: 30rpx;
+}
+.end{
+  z-index: 100;
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  width: 750rpx;
+}

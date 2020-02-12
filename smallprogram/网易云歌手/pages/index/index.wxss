@@ -1,0 +1,24 @@
+.container{
+  padding: 50rpx;
+}
+.title{
+  border-bottom: 2px solid #C20C0C;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 50rpx;
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.item{
+  width: 200rpx;
+  margin-bottom: 10rpx;
+}
+.item image{
+  width: 200rpx;height: 200rpx;
+}
+.item text{
+  font-size: 30rpx;
+}

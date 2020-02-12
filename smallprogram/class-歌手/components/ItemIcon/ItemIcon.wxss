@@ -1,0 +1,14 @@
+.bg image{
+    width: 200rpx;height: 200rpx;
+}
+.list{
+    display: flex;
+    font-size: 30rpx;
+    position: relative;
+    width: 200rpx;
+}
+.item{
+    width: 200rpx;
+    margin-top: 20rpx;
+}
+

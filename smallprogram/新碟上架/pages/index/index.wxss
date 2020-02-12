@@ -1,0 +1,30 @@
+.title{
+  height: 80rpx;width: 680rpx;
+  border-bottom: 2px solid #C20C0C;
+  font-size: 50rpx;
+  margin-bottom: 30rpx;
+  margin-left: 37rpx;
+}
+.item{
+  margin-bottom: 20rpx;
+}
+.item image{
+  width: 200rpx;height: 200rpx;
+}
+.content{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.name{
+  font-size: 35rpx;
+  width: 200rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.artist{
+  font-size: 30rpx;
+  color: #666666;
+  margin-top: 10rpx;
+}

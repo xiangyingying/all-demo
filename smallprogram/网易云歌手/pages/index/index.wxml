@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="title">热门歌手</view>
+  <view class="content">
+     <view class="item" wx:for="{{artists}}" wx:key="{{item}}">
+       <image src="{{item.picUrl}}"></image>
+       <text class="name">{{item.name}}</text>
+     </view>
+  </view>
+</view>

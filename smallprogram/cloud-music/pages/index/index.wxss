@@ -1,0 +1,23 @@
+image{
+  width: 200rpx;height: 200rpx;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.item{
+  width: 200rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.item text{
+  z-index: 100;
+  position: absolute;
+  top: 10rpx;right: 10rpx;
+  color: white;
+  font-size: 30rpx;
+}

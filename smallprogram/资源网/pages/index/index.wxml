@@ -1,0 +1,14 @@
+<view class="container">
+    <v-item
+        type="{{results.Android[0].type}}" desc="{{results.Android[2].desc}}" publishedAt="{{results.Android[0].publishedAt}}"
+        createdAt="{{results.Android[0].createdAt}}" who="{{results.Android[0].who}}">
+   </v-item>
+   <v-item
+        type="{{results.App[0].type}}" desc="{{results.App[2].desc}}" publishedAt="{{results.Android[0].publishedAt}}"
+        createdAt="{{results.App[0].createdAt}}" who="{{results.App[0].who}}">
+   </v-item>
+   <v-item
+        type="{{results.iOS[0].type}}" desc="{{results.iOS[2].desc}}" publishedAt="{{results.Android[0].publishedAt}}"
+        createdAt="{{results.iOS[0].createdAt}}" who="{{results.iOS[0].who}}">
+   </v-item>
+</view>

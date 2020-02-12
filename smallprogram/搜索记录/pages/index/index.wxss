@@ -1,0 +1,112 @@
+
+page {
+    height: 100%;
+  }
+  
+  .main-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background: linear-gradient(rgb(240, 125, 125), rgb(225, 237, 195)); */
+  }
+  
+  .input-box {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+  }
+  
+  .inp {
+    height: 50rpx;
+    width: 500rpx;
+    background: #eee;
+    border-radius: 13px;
+    font-size: 30rpx;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    width: 120rpx;
+    height: 50rpx;
+    font-size: 30rpx;
+    color: #000;
+    line-height: 50rpx;
+    border-radius: 13px;
+    display: flex;
+    
+  }
+  .history-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background: white;
+    box-sizing: border-box;
+    padding-bottom: 6px;
+    border-bottom: 2px solid rgb(50, 153, 221);
+    position: relative;
+    height: auto;
+  }
+  .history-top{
+    width:100%;
+    border-bottom: 1px solid #333;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .history{
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    box-sizing: border-box;
+    padding:0 10rpx;
+    margin:10rpx 10rpx;
+    background: #cfcccc;
+    border-radius: 13px;
+    height: 50rpx;
+    line-height: 50rpx;
+    
+  }
+  .history-bottom{
+    position: absolute;
+    width:30rpx;
+    background: rgb(50, 153, 221);
+    height: 6px;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .books-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .book-box{
+    width: 300rpx;
+    height: 400rpx;
+    margin:15px 0;
+  
+  }
+  .book-pic{
+    width:300rpx;
+    height: 370rpx;
+  }
+  .book-name{
+    width:300rpx;
+    height: 30rpx;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+  }

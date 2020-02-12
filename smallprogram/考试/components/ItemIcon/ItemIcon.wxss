@@ -1,0 +1,8 @@
+.bg{
+    width: 220rpx;height: 220rpx;
+}
+.item{
+    width: 220rpx;
+    font-size: 30rpx;
+    position: relative;
+}

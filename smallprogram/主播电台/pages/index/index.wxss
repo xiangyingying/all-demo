@@ -1,0 +1,52 @@
+.container{
+  height: 1000rpx;
+}
+.item{
+  display: flex;
+  padding: 20rpx;
+}
+.item image{
+  width: 250rpx;height: 250rpx;
+  margin-right: 20rpx;
+}
+.item-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 50rpx;
+}
+.name{
+  font-size: 35rpx;
+  color: black;
+  width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+.artist{
+ width: 200rpx;
+ font-size: 30rpx;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+.likedCount,.playCount{
+  font-size: 25rpx;
+  color: gray;width: 150rpx;
+  margin-bottom: 10rpx;
+}
+.likedCount{
+  margin-left: 50rpx;
+}
+.category{
+  font-size: 30rpx;
+  border: 1px solid #999;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 150rpx;
+  text-align: center;
+}

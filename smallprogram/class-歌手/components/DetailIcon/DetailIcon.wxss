@@ -1,0 +1,22 @@
+.play image{
+    width: 45rpx;height: 45rpx;
+}
+.Detail-item{
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin-top: 20rpx;
+}
+.name{
+    width: 200rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.play{
+    width: 45rpx;
+    margin-right: 50rpx;
+}
+.time{
+    margin:0 50rpx;
+}

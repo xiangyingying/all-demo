@@ -1,0 +1,87 @@
+.container{
+    height: 150rpx;
+    background: black;
+    overflow: hidden;
+  }
+  form{
+      display: block;
+      position: relative;
+      margin-top: 20rpx;
+  }
+  form input{
+      border: 1px solid #333;
+      width: 200px;height: 100rpx;
+      padding-left: 60rpx;
+      border-radius: 30rpx;
+      font-size: 14px;
+      background: white;
+  }
+  form image{
+      width: 50rpx;height: 50rpx;
+      position: absolute;
+      top: 30rpx;left: 5px;
+  }
+  form button{
+      width: 200rpx;height: 100rpx;
+      font-size: 14px;
+      position: absolute;
+      top: 0;right: 10rpx;
+      line-height: 100rpx;
+      border-radius: 30rpx;
+      border: none;
+  }
+  .content{
+    height: 150rpx;
+  }
+  .item{
+      padding: 10rpx 20rpx;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      border-bottom: 1px solid #dbdbdb;
+  }
+  .left{
+      position: relative;
+  }
+  .num{
+      font-size: 20px;
+      color: brown;
+      margin-right: 30rpx;
+      width: 20px;
+      text-align: center;
+  }
+  .item-bg{
+     height: 120rpx;width: 120rpx;
+     margin-right: 20rpx;
+  }
+  .left{
+     display: flex;
+     align-items: center;
+  }
+  .item-name{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 200rpx;
+  }
+  .left>view{
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     width: 300rpx;
+  }
+  .name{
+    font-size: 16px;
+    color: blue;
+  }
+  .artist{
+      font-size: 12px;
+  }
+  .right{
+      display: flex;
+      align-items: center;
+  }
+  .right .play{
+      width: 50rpx;height: 50rpx;
+      margin-left: 20px;
+  }

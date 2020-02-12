@@ -1,0 +1,13 @@
+<view class="container">
+    <v-item></v-item>
+    <view class="content">
+        <view class="item" wx:for="{{albums}}" wx:key="{{item}}"
+         bind:tap="handleClick"
+         data-id="{{item.id}}"
+        >
+            <image src="{{item.blurPicUrl}}"></image>
+            <view class="name">{{item.name}}</view>
+            <view class="artist">{{item.artist.name}}</view>
+        </view>
+    </view>
+</view>

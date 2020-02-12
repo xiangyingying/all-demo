@@ -1,0 +1,26 @@
+.main-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.item-box{
+  width:240rpx;
+  height:300rpx;
+  margin: 10px 0;
+  background: #818181;
+}
+.pic{
+  width:240rpx;
+  height: 240rpx;
+  background: pink;
+}
+.name{
+  width:240rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  font-size: 30rpx;
+
+}

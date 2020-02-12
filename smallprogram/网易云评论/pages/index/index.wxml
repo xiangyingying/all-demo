@@ -1,0 +1,6 @@
+
+ <view class="container">
+    <v-item wx:for="{{playlists}}" wx:key="{{item.id}}" bind:tap="handleClick" data-id="{{item.id}}" data-pic="{{item.coverImgUrl}}"
+     data="{{item}}">
+    </v-item>
+ </view>

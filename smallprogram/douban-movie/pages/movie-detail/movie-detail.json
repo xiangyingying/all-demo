@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "正在热映《电影《豆瓣",
+  "usingComponents": {
+    "v-item":"/components/movie-detail/movie-detail"
+  }
+}

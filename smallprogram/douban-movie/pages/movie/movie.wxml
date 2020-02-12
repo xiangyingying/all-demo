@@ -1,0 +1,7 @@
+<view class="container">
+    <image src="/images/post/sls.png"></image>
+    <view class="title">豆瓣电影榜单合集</view>
+    <view class="title-nav">最近、最近的影视信息收集</view>
+    <button bind:tap="handleClick" data-index="{{index}}"
+    wx:for="{{movies}}" wx:key="item"><text class="item">{{item}}</text><text class="icon">></text></button>
+</view>

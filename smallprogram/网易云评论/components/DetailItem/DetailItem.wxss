@@ -1,0 +1,45 @@
+.bg{
+    padding: 8rpx;
+    width: 150rpx;
+    height: 150rpx;
+    border: 1px solid #ccc;
+    margin-left: 10rpx;
+ }
+ .play{
+     width: 45rpx;
+ }
+ image{
+     width: 45rpx;height: 45rpx;
+ }
+ .content-item{
+     margin-top: 50rpx;
+     border: 1px solid #eee;
+     line-height: 50rpx;
+     font-size: 30rpx;
+     display: flex;
+ }
+ .title{
+     color: #333333;
+     width: 200rpx;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     margin-left: 50rpx;
+ }
+ .artist{
+     width: 150rpx;
+     margin-left: 50rpx;
+ }
+ .album{
+     margin-left: 50rpx;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     margin-left: 50rpx;
+     width: 200rpx;
+ }
+ .num{
+    color: red;
+    width: 50rpx;
+    font-size: 30rpx;
+}
+ 

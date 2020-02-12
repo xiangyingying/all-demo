@@ -1,0 +1,8 @@
+.hotMusic{
+    font-size: 40rpx;
+    font-weight: bold;
+    border-bottom: 2px solid brown;
+    padding: 20rpx 0;
+    width: 680rpx;
+    margin: 0 auto;
+}

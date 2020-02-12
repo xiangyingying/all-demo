@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mv/mv"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor":"#c20c2c",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "音乐",
+      "iconPath": "/images/selected-music.png",
+      "selectedIconPath": "/images/music.png"
+    },{
+      "pagePath": "pages/mv/mv",
+      "text": "mv",
+      "iconPath": "/images/selected-mv.png",
+      "selectedIconPath": "/images/mv.png"
+    }]
+  }
+}

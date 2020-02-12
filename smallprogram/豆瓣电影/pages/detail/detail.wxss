@@ -1,0 +1,29 @@
+.container{
+    margin-left: 20rpx;
+}
+.item-name{
+    font-weight: bold;
+    font-size: 50rpx;
+}
+.name{
+    color: #494949;
+}
+.time{
+    color: #888888;
+    margin-left: 10rpx;
+}
+.item-bg{
+    width: 400rpx;height: 500rpx;
+    margin-top: 20rpx;
+}
+.introduce{
+    margin-top: 30rpx;
+}
+.introduce text{
+    color: #4A9E62;
+}
+.content{
+    font-size: 33rpx;
+    margin-top: 20rpx;
+    text-indent: 2em;
+}

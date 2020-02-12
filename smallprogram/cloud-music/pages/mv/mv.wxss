@@ -1,0 +1,16 @@
+image{
+    width: 200rpx;height: 200rpx;
+  }
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .item{
+    width: 200rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 20rpx;
+    font-size: 30rpx;
+  }

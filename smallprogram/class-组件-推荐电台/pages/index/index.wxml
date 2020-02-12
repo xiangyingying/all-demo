@@ -1,0 +1,5 @@
+<view class="container">
+   <v-item wx:for="{{programs}}" wx:key="{{item}}" bind:tap="handleClick" data-id="{{item.id}}"
+   pic="{{item.blurCoverUrl}}" title="{{item.name}}" artist="{{item.mainSong.artists[0].name}}" category="{{item.radio.category}}"
+   ></v-item>
+</view>

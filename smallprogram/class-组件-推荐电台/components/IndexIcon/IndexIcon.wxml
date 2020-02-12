@@ -1,0 +1,12 @@
+<view class="item">
+   <view class="content">
+       <view class="bg">
+           <image src="{{pic}}"></image>
+        </view>
+       <view class="name">
+           <view class="title">{{title}}</view>
+           <view class="artist">{{artist}}</view>
+       </view>
+       <view class="btn">{{category}}</view>
+   </view>
+</view>

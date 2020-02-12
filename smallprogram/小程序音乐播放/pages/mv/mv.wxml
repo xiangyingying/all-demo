@@ -1,0 +1,9 @@
+<view class="container">
+        <view
+         bind:tap="handleClick"
+         data-id="{{item.id}}"
+         class="item" wx:for="{{mvs}}" wx:key="{{item.id}}">
+            <image src="{{item.cover}}"></image>
+            <text>{{item.name}}</text>
+        </view>
+</view>

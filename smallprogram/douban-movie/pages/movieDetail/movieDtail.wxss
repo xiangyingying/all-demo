@@ -1,0 +1,28 @@
+image{
+    width: 550rpx;height: 700rpx;
+}
+.container{
+    width: 550rpx;
+    margin: 50rpx auto;
+}
+.title{
+    width: 550rpx;
+    text-align: center;
+    font-size: 45rpx;
+    color: #444444;
+}
+.movieInfo{
+    color: #888888;
+    font-size: 30rpx;
+    line-height: 60rpx;
+    margin-top: 20rpx;
+}
+.summary{
+    margin-top: 70rpx;
+    margin-left: -30rpx;
+}
+.content{
+    font-size: 27rpx;
+    color: #747474;
+    line-height: 40rpx;
+}

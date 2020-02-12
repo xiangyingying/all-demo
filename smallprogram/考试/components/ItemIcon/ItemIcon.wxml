@@ -1,0 +1,6 @@
+<wxs src="../../utils/filter.wxs" module="tools"></wxs>
+<view class="item" bind:tap="handleClick">
+    <slot name="icon"></slot>
+    <image class="bg" src="{{data.cover}}"></image>
+    <text>{{tools.format(data.name)}}</text>
+</view>

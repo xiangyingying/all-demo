@@ -1,0 +1,6 @@
+<view class="item">
+    <slot name="icon"></slot>
+    <image class="bg" src="{{data.coverImgUrl}}"></image>
+    <view class="name">{{data.name}}</view>
+    <view class="artist">{{data.nickname}}</view>
+</view>

@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mv/mv",
+    "pages/mvPlay/mvPlay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c20c0c",
+    "navigationBarTitleText": "微信小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "音乐",
+      "iconPath": "/images/selected-music.png",
+      "selectedIconPath": "/images/music.png"
+    },
+    {
+      "pagePath": "pages/mv/mv",
+    "text": "MV",
+    "iconPath":"/images/selected-mv.png",
+    "selectedIconPath":"/images/mv.png"
+    }]  
+  },
+  "sitemapLocation": "sitemap.json"
+}

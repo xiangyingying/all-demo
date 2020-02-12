@@ -1,0 +1,5 @@
+<view class="container">
+    <v-item data="{{item}}" wx:for="{{movies}}" wx:key="item"
+     data-index="{{index}}"  data-subtitle="{{item.subtitle}}"  bind:tap="handleDetail"
+    ></v-item>
+</view>

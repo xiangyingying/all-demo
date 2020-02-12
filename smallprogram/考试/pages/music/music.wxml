@@ -1,0 +1,10 @@
+<view class="container">
+    <v-item data="{{item}}" wx:for="{{musics}}" wx:key="item"
+    class="{{index%2==1?'currentIndex':''}}" index="{{index}}"
+    bind:toggle="handleToggle"
+    >
+        <view class="icon" slot="icon">
+            <image src="/images/p0.png"></image>{{item.playCount}}
+        </view>
+    </v-item>
+</view>

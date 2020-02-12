@@ -1,0 +1,40 @@
+image{
+    width: 100rpx;height: 100rpx;
+}
+.bg{
+    width: 100rpx;
+    margin-left: 10rpx;
+}
+.content{
+    display: flex;
+    margin-top: 20rpx;
+    align-items: center;
+    padding: 10rpx;
+}
+.name{
+    margin-left: 20rpx;
+}
+.title{
+    width:450rpx;
+    font-size: 30rpx;
+    color: #4C4C4C;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.artist{
+    width: 300rpx;
+    font-size: 27rpx;
+    color:#A7A7A7 ;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.btn{
+    line-height: 50rpx;
+    border: 1px solid #999;
+    color: #A7A7A7;
+    font-size: 30rpx;
+    margin-left: 20rpx;
+    padding: 0 10rpx;
+}

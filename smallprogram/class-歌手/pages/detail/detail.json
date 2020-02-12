@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "Detail-item":"/components/DetailIcon/DetailIcon",
+    "v-item":"/components/ItemIcon/ItemIcon",
+    "van-tab": "/vant-ui/tab/index",
+    "van-tabs": "/vant-ui/tabs/index"
+  }
+}

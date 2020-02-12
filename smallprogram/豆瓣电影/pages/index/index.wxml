@@ -1,0 +1,11 @@
+<view class="container">
+    <view class="item" wx:for="{{subjects}}" wx:key="{{item}}"
+    data-id="{{item.id}}"
+    data-title="{{item.title}}"
+    data-img="{{item.img}}"
+    bind:tap="handleClick"
+    >
+    <image src="{{item.images.small}}"></image>
+    <text>{{item.title}}</text>
+    </view>
+</view>

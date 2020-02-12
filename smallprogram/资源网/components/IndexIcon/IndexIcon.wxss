@@ -1,0 +1,17 @@
+.container{
+    width: 700rpx;
+    margin:0 auto;
+    border-bottom: 1px solid #eee;
+    padding: 20rpx 0;
+}
+.type{
+    font-size: 40rpx;
+    font-weight: bold;
+    bottom: 10rpx;
+}
+.desc{
+    font-size: 35rpx;
+}
+.title{
+    color:#0000EE ;
+}

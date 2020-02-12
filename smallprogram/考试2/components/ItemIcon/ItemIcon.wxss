@@ -1,0 +1,28 @@
+.item{
+    display: flex;
+    align-items: center;
+}
+.bg image{
+    width: 200rpx;height: 200rpx;
+}
+.bg{
+    width: 200rpx;
+    margin-left: 50rpx;
+}
+.playCount{
+    color: #B4B4B4;
+    font-size: 34rpx;
+    margin-top: 20rpx;
+}
+.num{
+    font-size: 50rpx;
+    color: #FF5684;
+    margin-left: 20rpx;
+    width: 20rpx;
+}
+.detail{
+    margin-left: 50rpx;
+}
+.currentIndex{
+    background: #eee;
+}

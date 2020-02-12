@@ -1,0 +1,28 @@
+image{
+    width: 150rpx;height:150rpx;
+}
+.item{
+    display: flex;
+    padding: 20rpx 40rpx;
+    border-bottom:1px solid #eeeeee ;
+}
+.detail{
+    margin-left: 20rpx;
+    line-height: 60rpx;
+    flex: 1;
+}
+.title{
+    font-size: 45rpx;
+}
+.name{
+    color: #C7C7C7;
+}
+.artist{
+    color: #ABABAB;
+    font-size: 30rpx;
+}
+.score{
+    color:#F8634C ;
+    font-weight: bold;
+    font-size: 30rpx;
+}

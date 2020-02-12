@@ -1,0 +1,7 @@
+<view class="container">
+    <view class="item" wx:for="{{data}}" wx:key="{{item}}">
+        <v-item data="{{item.name}}">
+            <image slot="icon" src="{{item.cover}}"></image>
+        </v-item>
+    </view>
+</view>

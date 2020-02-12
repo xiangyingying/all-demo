@@ -1,0 +1,5 @@
+<view class="container">   
+        <image src="/images/avatar/4.png" />
+    <view class="name">Hello October!</view>
+    <button bind:tap="handleTab">开启小程序之旅</button>
+</view>

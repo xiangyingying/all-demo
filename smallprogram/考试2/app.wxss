@@ -1,0 +1,7 @@
+
+v-item{
+    margin-top: 20rpx;
+}
+.currentIndex{
+    background: red;
+}

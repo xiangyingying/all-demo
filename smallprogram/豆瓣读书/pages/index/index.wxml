@@ -1,0 +1,29 @@
+<view class="container">
+  <text class="title">豆瓣读书</text>
+  <form  bind:submit="handleSubmit">
+    <view class="search-wrap">
+      <input type="text" name="keyword" placeholder="书名、作者、ISBN" />
+      <button form-type="submit"><image class="search-bg" src="/images/搜索.png"></image></button>
+    </view>
+  </form>
+</view>
+<view class="content">
+  <view class="searchBook"></view>
+ <!--  <view class="content-title">搜索{{keyword}}</view> -->
+  <view class="item" wx:for="{{books}}" wx:key="{{item}}">
+    <image src="/images/xskdjs.jpg"></image>
+    <view class="item-content">
+      <view class="name"
+      bind:tap="handleClick"
+      data-id="{{item.id}}"
+      >{{item.title}}</view>
+      <view class="count">{{item.rating.numRaters}}人评价</view>
+      <view class="list">
+        <text class="artist">{{item.author}} / </text>
+        <text class="time">{{item.pubdate}} / </text>
+        <text class="publish">{{item.publisher}} / </text>
+        <text class="price">{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+</view>

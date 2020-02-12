@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+v-item{
+    margin-top: 20rpx;
+}
+.currentIndex{
+    border: 1px solid red;
+}

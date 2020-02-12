@@ -1,0 +1,40 @@
+<view class="container">
+    <view class="top">
+        <view class="top-bg"><image src="{{pic}}"></image></view>
+        <view class="top-right">
+            <view><text class="program">电台节目</text><text class="name">{{playlist.name}}</text></view>
+            <view class="right-content"><image class="note" src="/images/音乐.png"></image>
+                  <text class="guide">{{playlist.subscribers[0].nickname}}</text>
+                  <button><image src="/images/五角星.png"></image><text>订阅{{playlist.radio.subCount}}</text></button>
+            </view>
+        </view>
+    </view>
+    <view class="list">
+        <button bind:tap="handlePlay"
+         data-id="{{playlist.mainSong.id}}"
+         data-name="{{playlist.name}}"
+         class="play"><image src="{{isPlay&&prevId==playlist.mainSong.id?'/images/暂停 (3).png':'/images/播放 (3).png'}}"></image><text>播放13分28秒</text></button>
+        <view class="btns">
+            <button class="laud"><image src="/images/收藏 (1).png"></image>{{playlist.subscribedCount}}</button>
+            <button class="notice"><image src="/images/消 息1-01.png"></image>{{playlist.commentCount}}</button>
+            <button class="relay"><image src="/images/分享.png"></image>{{playlist.shareCount}}</button>
+            <button class="down"><image src="/images/下载.png"></image>下载</button>
+        </view>
+        <view class="outplay"><image src="/images/音乐 (2).png"></image><text>生成外链播放器</text></view>
+        <view class="introduce">介绍： {{playlist.description}}</view>
+    </view>
+</view>
+<view class="song-list">
+    <v-detailItem
+    wx:for="{{playlist.tracks}}" wx:key="{{item.id}}" data="{{item}}"
+    index="{{index}}" >
+  </v-detailItem>
+</view>
+<view class="comment"><text class="comment-name">评论：</text><text class="comment-num">共{{playlist.commentCount}}条评论</text>
+</view>
+<view class="comment-content" wx:for="{{hotComments}}" wx:key="{{item}}">
+        <view class="user-bg">
+            <image src="{{item.user.avatarUrl}}"></image>
+        </view>
+        <view class="use-content"><text class="user-name">{{item.user.nickname}} ：</text><text class="user-comment">{{item.content}}</text></view>
+</view>

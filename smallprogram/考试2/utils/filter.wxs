@@ -1,0 +1,27 @@
+function format(value){
+    if(value){
+        if(value.length>8){
+            value=value.slice(0,8)+"..."
+        }
+        return value
+    }
+}
+function num(playCount){
+    if(playCount>10000){
+        playCount=Math.ceil(playCount/1000)/10+"万"
+    }
+    return playCount
+}
+function index(number){
+    if(number){
+        if(number<10){
+            number="0"+number
+        }
+        return number
+    }
+}
+module.exports={
+    format:format,
+    num:num,
+    index:index
+}

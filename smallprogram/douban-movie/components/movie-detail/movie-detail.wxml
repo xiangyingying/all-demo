@@ -1,0 +1,11 @@
+<view class="item" bind:tap="handleDetail">
+    <view class="bg">
+        <image src="{{data.images}}"></image>
+    </view>
+    <view class="detail">
+        <view class="title">{{data.title}}</view>
+        <view class="name">{{data.original_title}}({{data.year}})</view>
+        <view class="artist">导演：{{data.name}}</view>
+    </view>
+    <view class="score">{{data.average}}</view>
+</view>

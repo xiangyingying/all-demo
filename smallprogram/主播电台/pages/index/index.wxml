@@ -1,0 +1,11 @@
+<view class="container">
+   <view class="item" wx:for="{{musics}}" wx:key="{{item}}">
+      <image src="{{item.blurCoverUrl}}"></image>
+      <view class="item-content">
+         <text class="name">{{item.name}}</text>
+         <text class="artist">{{item.artists}}</text>
+         <text class="playCount">播放:{{item.listenerCount}} <text class="likedCount">赞{{item.likedCount}}</text></text>
+         <text class="category">{{item.category}}</text>
+      </view>
+   </view>
+</view>

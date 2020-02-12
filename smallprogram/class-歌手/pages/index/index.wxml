@@ -1,0 +1,6 @@
+<view class="container">
+    <v-item  wx:for="{{artists}}" wx:key="{{item}}" bind:tap="handleClick" data-id="{{item.id}}"
+        pic="{{item.picUrl}}" name="{{item.name}}">
+        <image class="icon" slot="icon" src="/images/Icon.png"></image>
+    </v-item>
+</view>

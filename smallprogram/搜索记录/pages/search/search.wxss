@@ -1,0 +1,48 @@
+.form image{
+    width: 50rpx;height: 50rpx;
+    position: absolute;
+    top:50rpx;left: 20rpx;
+}
+.btn{
+    width: 150rpx;
+    border: 1px dashed #8A8A8A;
+    font-size: 30rpx;
+    border-radius: 50rpx;
+    color: #8A8A8A;
+    background: white;
+}
+input{
+    width:450rpx;
+    padding: 20rpx 100rpx;
+    background:#FAFAFA;
+    border-radius: 50rpx;
+    font-size: 30rpx;
+}
+.form{
+    display: flex;
+    padding: 20rpx 0;
+    border-top: 1px solid #CDCDCD;
+    border-bottom: 1px solid #CDCDCD;
+    margin-bottom: 20rpx;
+}
+.title{
+    border-left: 8rpx solid #000000;
+    padding-left: 30rpx;
+    margin-bottom: 20rpx;
+    margin-left: 10rpx;
+}
+.content{
+    margin-left: 10rpx;
+    margin-top: 30rpx;
+}
+.item{
+    background:#FAFAFA;
+    font-size: 35rpx;
+    color: #888888;
+    padding: 20rpx;
+    display: inline-block;
+    margin-left: 30rpx;
+}
+.hot{
+    margin-top: 50rpx;
+}

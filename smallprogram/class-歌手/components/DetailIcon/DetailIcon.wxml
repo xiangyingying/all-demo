@@ -1,0 +1,9 @@
+<view class="Detail-item">
+    <view class="num">{{index}}</view>
+    <view class="play">
+        <image src="/images/暂停按钮.png"></image>
+    </view>
+    <view class="name">{{name}}</view>
+    <view class="time">4:00</view>
+    <view class="artist">{{artist}}</view>
+</view>

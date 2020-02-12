@@ -1,0 +1,19 @@
+<form bind:submit="handleSubmit">
+   <view class="form">
+      <image src="/images/搜索 (1).png" />
+      <input type="text" placeholder="搜索图书名称" name="keyword" value="{{searchValue}}" />
+      <button class="btn" form-type="submit">搜索</button>
+   </view>
+</form>
+<view class="history">
+      <view class="title">历史搜索</view>
+      <view class="content">
+          <text class="item" wx:for="{{historyWords}}" wx:key="item">{{item}}</text>
+      </view>
+</view>
+<view class="hot">
+      <view class="title">热门搜索</view>
+      <view class="content">
+          <text wx:for="{{musics}}" wx:key="item" class="item">{{item.first}}</text>
+      </view>
+</view>

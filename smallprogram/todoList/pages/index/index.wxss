@@ -1,0 +1,70 @@
+input{
+  width: 70%;
+  height: 100rpx;
+  border: 1px solid white;
+  padding-left: 20rpx;
+  background: white;
+}
+button{
+  width: 20%;
+  height: 100rpx;
+}
+.search{
+  display: flex;
+}
+.content{
+  background: black;
+  width: 750rpx;
+  padding: 20rpx 5rpx;
+}
+.row{
+  display: flex;
+}
+.row view:nth-child(2){
+  width: 650rpx;
+  height: 60rpx;
+  background: white;
+}
+.delete{
+  width: 50rpx;height: 50rpx;
+  border-radius: 50%;
+  margin-left: -100rpx;
+  margin-top: 7rpx;
+  border: 1px solid #cdcdcd;
+  position: relative;
+}
+.delete text{
+  width: 35rpx;height: 35rpx;
+  display: block;
+  border-radius: 50%;
+  background: #cdcdcd;
+  color: white;
+  line-height: 35rpx;
+  text-align: center;
+  position: absolute;
+  top: 50%;left: 50%;
+  transform: translate(-50%,-50%);
+}
+.container{
+  background: #cdcdcd;
+  height: 1100rpx;
+}
+.number{
+  margin-top: -50rpx;
+  width: 40rpx;height: 40rpx;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40rpx;
+  color: white;
+}
+.num{
+  width: 40rpx;height: 40rpx;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40rpx;
+  color: white;
+  position: absolute;
+  top: 140rpx;right:100rpx;
+}

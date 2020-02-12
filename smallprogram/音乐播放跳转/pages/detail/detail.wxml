@@ -1,0 +1,22 @@
+<view class="content">
+    <view class="item"  wx:for="{{musics}}"  wx:key="{{item}}"
+    data-id="{{item.id}}"
+    data-pic="{{item.pic}}"
+    data-name="{{item.name}}"
+    bind:tap="handlePlay"
+    bind:tap="handleClick"
+     >
+      <view class="left">
+          <text class="num">{{index+1}}</text>
+          <image class="item-bg" src="{{item.musicUrl}}"></image>
+          <view>
+            <text class="name">{{item.name}}</text>
+            <view class="artist">by:<text>{{item.artistName}}</text></view>
+          </view>
+      </view>
+      <view class="right">
+          <text>{{item.time}}</text>
+          <image class="play" src="{{isPlay&&prevId==item.id?'/images/播放.png':'/images/暂停.png'}}"></image>
+      </view>    
+    </view>
+  </view>

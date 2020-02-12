@@ -1,0 +1,145 @@
+.top-right image,.list image{
+    width: 40rpx;height: 40rpx;
+}
+.top-bg{
+   padding: 8rpx;
+   height: 150rpx;
+   border: 1px solid #ccc;
+   margin-left: 10rpx;
+}
+.top-bg image{
+    width: 150rpx;height: 150rpx;
+}
+.top{
+    display: flex;
+}
+.top-right{
+    margin-left: 30rpx;
+}
+.top-right button{
+    font-size: 25rpx;width: 250rpx;
+    background: white;
+}
+.program{
+    padding: 10rpx;
+    background: #D61D1D;
+    color: white;
+    font-size: 30rpx;
+    border-radius: 5rpx;
+}
+.program::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;height: 0;
+    border:11px solid transparent;
+    border-left-color: #D61D1D;
+    left: 144px;top: 1px;
+}
+.name{
+    margin-left: 50rpx;
+}
+.guide{
+    font-size: 30rpx;
+}
+.top-right view{
+    margin-bottom: 40rpx;
+}
+.top-right button{
+    position: absolute;
+    top: 100rpx;right: 10rpx;
+    width: 230rpx;
+}
+.top-right button image{
+    position: absolute;
+    left: 10rpx;top: 5rpx; 
+}
+.top-right button text{
+    margin-left: 20rpx;
+}
+.note{
+    position: absolute;
+    top:100rpx;
+}
+.guide{
+    position: relative;
+    margin-left: 45rpx;
+    color: #898989;
+}
+.play{
+    width: 300rpx;
+    font-size: 30rpx;
+    background: #2172C1;
+    color: white;
+    position: relative;
+    padding-left: 10rpx;
+}
+.play image{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.play text{
+    margin-left: 60rpx;
+}
+.btns button{
+    width: 170rpx;
+    font-size: 30rpx;
+    position: relative;
+}
+.btns{
+    display: flex;
+    height: 70rpx;
+    margin-top: 40rpx;
+}
+.btns button image{
+    position: absolute;
+    top: 7px;left: 10px;
+}
+.list button{
+    margin-left: 10rpx;
+}
+.outplay{
+    width: 350rpx;
+    font-size: 30rpx;
+    color: #0C73C2;
+    border: none;
+    background: white;
+    margin-top: 30rpx;
+    margin-bottom: 50rpx;
+}
+.outplay text{
+    margin-left: 20rpx;
+}
+.content view:first-child{
+    width: 150rpx;
+    border: 1px solid #CC0000;
+    font-size: 30rpx;
+    text-align: center;
+    color: #CC0000;
+    margin-left: 10rpx;
+}
+.content view:nth-child(2){
+    width: 700rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    letter-spacing: .1em;
+    margin: 30rpx 0;
+}
+.content view:nth-child(2) text{
+    margin-left: 20rpx;
+}
+.content view:nth-child(3){
+    font-size: 28rpx;
+    color: #BBBBBB
+}
+.content view:nth-child(3) text{
+    margin-left: 40rpx;
+}
+.introduce{
+    font-size: 35rpx;
+    color: #898989;
+    margin-left: 10rpx;
+    margin-top: 30rpx;
+    width: 600rpx;
+}

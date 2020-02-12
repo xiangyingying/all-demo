@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="content">
+  <view class="item" wx:for="{{musics}}" wx:key="{{item}}">
+    <image src="{{item.imgUrl}}"></image>
+    <text class="playcount">{{item.playCount}}</text>
+    <text class="name">{{item.name}}</text>
+    <text class="artist">by {{item.nickname}}</text>
+  </view>
+  </view>
+</view>

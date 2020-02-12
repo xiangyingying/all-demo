@@ -1,0 +1,13 @@
+.container{
+    width: 700rpx;
+    margin: 0 auto;
+}
+.top image{
+   width: 700rpx;
+   margin-top: 20rpx;
+}
+.all{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,11 @@
+<wxs src="../../utils/filter.wxs" module="tools"></wxs>
+<view class="item {{index%2==1?'currentIndex':''}}" >
+   <view class="num">{{tools.index(index+1)}}</view>
+   <view class="bg">
+   <image src="{{data.cover}}" />
+   </view>
+   <view class="detail">
+      <view class="name">{{tools.format(data.title)}}</view>
+      <view class="playCount">播放量：{{tools.num(data.listen_num)}}</view>
+   </view>
+</view>

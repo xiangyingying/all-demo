@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="item">
+        <view class="type">{{type}}</view>
+        <view class="desc">
+            <text class="title">描述：</text>
+            <text>{{desc}}</text>
+        </view>
+        <view class="desc">
+            <text class="title">创作时间：</text>
+            <text>{{createdAt}}</text>
+        </view>
+        <view class="desc">
+            <text class="title">发布时间：</text>
+            <text>{{publishedAt}}</text>
+        </view>
+        <view class="desc">
+            <text class="title">作者：</text>
+            <text>{{who}}</text>
+        </view>
+    </view>
+</view>

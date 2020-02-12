@@ -1,0 +1,34 @@
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="华语">
+     <view class="main-box">
+      <view class="item-box" wx:for="{{playlists}}" wx:key="item">
+        <image src="{{item.coverImgUrl}}" class="pic" />
+        <view class="name">{{item.name}}</view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="韩语">
+  <view class="main-box">
+      <view class="item-box" wx:for="{{playlists}}" wx:key="item">
+        <image src="{{item.coverImgUrl}}" class="pic" />
+        <view class="name">{{item.name}}</view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="日语">
+  <view class="main-box">
+      <view class="item-box" wx:for="{{playlists}}" wx:key="item">
+        <image src="{{item.coverImgUrl}}" class="pic" />
+        <view class="name">{{item.name}}</view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="欧美">
+  <view class="main-box">
+      <view class="item-box" wx:for="{{playlists}}" wx:key="item">
+        <image src="{{item.coverImgUrl}}" class="pic" />
+        <view class="name">{{item.name}}</view>
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

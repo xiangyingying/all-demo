@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="item" wx:for="{{programs}}" wx:key="{{item}}">
+    <view class="item-bg">
+      <image src="{{item.blurCoverUrl}}"></image>
+    </view>
+    <view class="item-content">
+      <view class="name"
+      bind:tap="handleClick"
+      data-id="{{item.id}}"
+      >{{item.name}}
+      </view>
+      <view class="artist">{{item.artist}}</view>
+      <view class="count"><text>播放{{item.listenerCount}}</text><text>赞{{item.likedCount}}</text></view>
+    </view>
+    <button>{{item.radio.category}}</button>
+  </view>
+</view>

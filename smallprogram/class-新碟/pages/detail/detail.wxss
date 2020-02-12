@@ -1,0 +1,89 @@
+.container{
+    margin-left: 10rpx;
+}
+.item{
+    margin-top: 20rpx;
+}
+.item-bg image{
+    width: 300rpx;height: 300rpx;
+}
+.item-content{
+    display: flex;
+}
+.btns image,.play image{
+    width: 45rpx;height: 45rpx;
+    position: absolute;
+    top: 50%;left: 20rpx;
+    transform: translateY(-50%)
+}
+.btns button,.play button{
+    font-size: 30rpx;
+    width: 180rpx;
+    margin-bottom: 10rpx;
+}
+.btns button text,.play button text{
+    margin-left: 30rpx;
+}
+.btns{
+    margin-top: 40rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.play{
+    position: relative;
+    margin-top: 20rpx;
+    display: flex;
+}
+.play button{
+    background: #2172C1;
+    color: white;
+    margin: 0;
+}
+.play button:nth-child(2){
+    width: 80rpx;height: 70rpx;
+    margin-left: 7rpx;
+}
+.special{
+    padding: 10rpx;
+    background: #D61D1D;
+    color: white;
+    font-size: 30rpx;
+    border-radius: 5rpx;
+}
+.special::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;height: 0;
+    border:12px solid transparent;
+    border-left-color: #D61D1D;
+    left: 175px;top: 7px;
+}
+.item-detail{
+    margin-left: 30rpx;
+}
+.item-detail view .name{
+    font-size: 35rpx;
+    margin-left: 40rpx;
+    color: #5F5F5F;
+    font-weight: bold;
+}
+.item-detail view{
+    font-size: 30rpx;
+    color: #B3B3B3;
+    line-height: 50rpx;
+}
+.introduce-item{
+    font-size: 35rpx;
+    color: #333333;
+    font-weight: bold;
+    margin-top: 20rpx;
+}
+.introduce-content{
+    margin-left: 30rpx;
+    font-size: 30rpx;
+    color: #666666;
+    margin-top: 20rpx;
+    width: 300rpx;
+    line-height: 80rpx;
+}

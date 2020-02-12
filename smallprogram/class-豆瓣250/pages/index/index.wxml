@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="item" wx:for="{{subjects}}" wx:key="{{item}}"
+    bind:tap="handleClick"
+    data-id="{{item.id}}"
+    > 
+       <image src="{{item.images.small}}"></image>
+       <text>{{item.title}}</text>
+    </view>
+</view>
+<view class="end" wx:if="{{isEnd}}">已经到达底部</view>

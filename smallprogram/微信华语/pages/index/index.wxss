@@ -1,0 +1,45 @@
+.container{
+  height: 2000rpx;
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 20rpx;
+}
+.item{
+  width: 176rpx;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding:20rpx;
+}
+.item image{
+  height: 200rpx;width: 200rpx;
+}
+.playcount{
+   font-size: 27rpx;
+   background: #3F4041;
+   height: 60rpx;width: 176rpx;
+   opacity: .8;
+   color: white;
+   border: 1px solid black;
+   position: absolute;
+   top: 46%;
+   line-height: 60rpx;
+   padding-left: 20rpx;
+}
+.name{
+  font-size: 35rpx;
+  margin: 20rpx 0 5rpx 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.artist{
+  font-size: 27rpx;
+  color: #666666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

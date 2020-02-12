@@ -1,0 +1,13 @@
+<view class="container">
+    <image src="{{movies.images.small}}"></image>
+    <view class="title">{{movies.title}} ({{movies.year}})</view>
+    <view class="movieInfo">
+        <view class="score">评分：{{movies.rating.average}}</view>
+        <view class="artist">导演：{{movies.directors[0].name}}</view>
+        <view class="acotr">主演：{{movies.casts[0].name}}</view>
+    </view>
+    <view class="summary">
+        <view>摘要：</view>
+        <view class="content">{{movies.summary}}</view>
+    </view>
+</view>

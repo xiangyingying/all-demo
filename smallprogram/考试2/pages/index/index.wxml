@@ -1,0 +1,5 @@
+<view class="container">
+   <v-item data="{{item}}" wx:for="{{v_hot}}" wx:key="item.id"
+   index="{{index}}">
+   </v-item>
+</view>

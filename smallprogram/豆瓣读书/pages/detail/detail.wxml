@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="item" wx:for="{{books}}" wx:key="{{item}}">
+        <view class="title">{{item.title}}</view>
+         <view class="item-content">
+             <view class="img"><image src="/images/xskdjs.jpg"></image></view>
+             <view class="detail">
+                 <view>作者：<text class="artist">{{item.author}}</text></view>
+                 <view>出版社：<text class="publish">{{item.publisher}}</text></view>
+                 <view>译者：<text class="translator">{{item.translator}}</text></view>
+                 <view>出版年：<text class="pubdata">{{item.pubdate}}</text></view>
+                 <view>页数：<text class="fixedMoney">{{item.pages}}元</text></view>
+                 <view>装帧：<text class="bindLayout">{{item.binding}}</text></view>
+                 <view>ISBN：<text class="ISBN">{{item.isbn13}}</text></view>
+             </view>
+         </view>
+         <view class="controduce">
+             <view class="controduce-item">内容介绍 · · · · · ·</view>
+             <view class="controduce-content">{{item.summary}}</view>
+         </view>
+    </view>
+</view>

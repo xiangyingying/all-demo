@@ -1,0 +1,5 @@
+<view class="container">
+    <image src="/images/avatar/1.png"></image>
+    <view>电影节</view>
+    <button bind:tap="handleTap">进入</button>
+</view>

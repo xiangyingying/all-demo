@@ -1,0 +1,29 @@
+<view class="container">
+    <view class="item">
+        <view class="item-content">
+         <view class="item-bg"><image src="{{album.blurPicUrl}}"></image></view>
+         <view class="item-detail">
+             <view><text class="special">专辑</text><text class="name">{{album.name}}</text></view>
+             <view>歌手：<text class="songer">{{album.name}}</text></view>
+             <view>发行时间：<text class="year">2019-08-21</text></view>
+             <view>发行公司：<text class="company">{{album.company}}</text></view>
+             <view class="play">
+                 <button><image src="/images/播放 (3).png"></image><text>播放</text></button>
+                 <button><image src="/images/加号（添加）.png"></image></button>
+             </view>
+         </view>
+        </view>
+        <view class="btns">
+         <button><image src="/images/收藏 (1).png"></image><text>收藏</text></button>
+         <button><image src="/images/分享.png"></image><text>({{album.info.shareCount}})</text></button>
+         <button><image src="/images/下载.png"></image><text>下载</text></button>
+         <button><image src="/images/消 息1-01.png"></image><text>({{album.info.commentCount}})</text></button>
+        </view>
+        <view class="introduce">
+            <view class="introduce-item">专辑介绍:</view>
+            <view class="introduce-content">
+                {{album.description}}
+            </view>
+        </view>
+    </view>
+ </view>
