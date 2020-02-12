@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <form action="/doEdit" method="POST" role="form">
+        <legend>Form title</legend>
+        <input type="text" type="hidden" name="_id" value="{{data._id}}">
+        <div class="form-group">
+            <label for="">姓名</label>
+            <input type="text" class="form-control" name="name" value="{{data.name}}" id="" placeholder="请输入姓名">
+        </div>
+        <div class="form-group">
+                <label for="">性别</label>
+                <input type="text" class="form-control" name="age" value="{{data.age}}" id="" placeholder="请输入性别">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">提交</button>
+    </form>
+    
+</body>
+</html>

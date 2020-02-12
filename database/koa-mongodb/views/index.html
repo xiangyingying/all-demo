@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>表格</h1>
+    
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{each data}}
+            <tr>
+                <td>{{$index}}</td>
+                <td>{{$value.name}}</td>
+                <td>{{$value.age}}</td>
+                <td>
+                    <a href="/delete?id={{@ $value._id}}" class="btn btn-danger">删除</a>
+                    <a href="/edit?item={{$value}}" class="btn btn-danger">编辑</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <a href="/add" class="btn btn-primary">增加</a>
+</body>
+</html>

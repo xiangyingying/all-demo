@@ -1,0 +1,17 @@
+{
+  "name": "koa-mongodb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "koa": "^2.10.0",
+    "koa-art-template": "^1.1.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.7.5"
+  }
+}
