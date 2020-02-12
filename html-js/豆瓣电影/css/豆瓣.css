@@ -1,0 +1,20 @@
+*{margin: 0;padding: 0}
+body{
+    /* padding-left: 363px;padding-right: 363px; */
+    padding-left: 24%;padding-right: 19%;
+    padding-top: 30px;
+}
+img{
+    width: 149px;height: 220px;
+    margin-top:12px;margin-left: 12px; 
+}
+div{
+    width:170px;height: 260px;
+    margin-right: 21px;
+    margin-bottom: 21px;
+    float: left;
+    box-shadow: 2px 1px 6px 3px rgb(175,175,175);
+}
+p{
+    margin-top: -3px;margin-left: 12px; 
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="#">Links</a>
+           <div class="weather">
+                <img src="images/天气.png" alt="">
+                <p>Set Location</p>
+           </div>
+
+        </div>
+        <div class="content">
+            <div id="time">20:06</div>
+            <span class="title">Good evening,xiangyingying.</span>
+            <h3>what is your main focus for today?</h3>
+            <input type="text" id="ipt">
+            <div class="input-check">
+                <input type="checkbox" id="checkbox" name="keyword">
+                <span id="word" class="line">hi</span>
+            </div>
+            <p>"Start where you are. Use you have.Do what yo can."</p>
+        </div>
+        <div class="setting">
+            <img src="images/设 置.png" alt="">
+            <a>Lake Briena,Swizerland<br>
+                  Photo by Andreas Guchhom/Unsolash
+            </a>
+        </div>
+        <a href="#" class="todo">Todo</a>
+    </div>
+    <script>
+         var input=document.getElementById("ipt")
+         var checkbox=document.getElementById("checkbox")
+         var span=document.getElementById("word")
+         input.onkeyup=function(event){
+             if(event.keyCode==13){
+                 checkbox.style.display="block"
+                 span.style.display="block"
+                 input.style.display="none"
+                 console.log(event)
+             }
+         }
+         checkbox.style.display='none'
+         span.style.display='none'
+         span.classList.remove("line")
+         checkbox.onclick=function(event){  
+               if(event.isTrusted==true){
+                span.classList.add("line") 
+               }else if(event.altkey==false){
+                   span.classList.remove("line")
+               }             
+         }
+         setInterval(function(){
+             var oDate=new Date();
+             var hours=oDate.getHours();
+             var minutes=oDate.getMinutes();          
+             function transform(params){
+                return params=params<10?"0"+params:params
+             }
+             document.getElementById("time").innerHTML=transform(hours)+":"+transform(minutes)
+         },1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/轮播.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1291009_tu8zxlenbch.css">
+</head>
+<body>
+        <div class="container">
+                <div class="content">
+                    <div id="list">
+                        <img src="images/01.png" alt="">
+                        <img src="images/02.png" alt="">
+                        <img src="images/03.png" alt="">
+                        <img src="images/04.png" alt="">
+                        <img src="images/05.png" alt="">
+                    </div>
+                    <button id="prev"></button>
+                    <button id="next"></button>
+                    <div id="btns">
+                        <span class="current"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <script>
+              var index=0;
+              $("#next").click(function(){
+                  if(!$("#list>img").is(":animated")){
+                      index++;
+                      if(index>4){
+                          index=0;
+                      }
+                      animate(index)
+                  }
+              })
+              $("#prev").click(function(){
+                  if(!$("#list>img").is(":animated")){
+                      index--;
+                      if(index>4){
+                          index=0
+                      }
+                      animate(index)
+                  }
+              })
+              $("#btns>span").click(function(){
+                  index=$(this).index();
+                  animate(index)
+              })
+              function animate(index){
+                $("#list>img").eq(index).fadeIn(1000).siblings().fadeOut(1000);
+                $("#btns>span").eq(index).addClass("current").siblings().removeClass("current")
+              }
+            </script>
+</body>
+</html>

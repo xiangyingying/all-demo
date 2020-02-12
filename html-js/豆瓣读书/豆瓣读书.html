@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/豆瓣读书.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1291009_y0ppa50fun.css">
+</head>
+<body>
+    <div class="top">
+        <div class="top-left">
+            <a href="#">豆瓣</a>
+            <a href="#">读书</a>
+            <a href="#">电影</a>
+            <a href="#">音乐</a>
+            <a href="#">同城</a>
+            <a href="#">小组</a>
+            <a href="#">阅读</a>
+            <a href="#">FM</a>
+            <a href="#">时间</a>
+            <a href="#">豆品</a>
+            <a href="#">更多</a>
+        </div>
+        <div class="top-right">
+            <a href="#">下载豆瓣客户端</a>
+            <a href="#">登录/注册</a>
+        </div>
+    </div>
+    <div class="nav">
+        <a href=""><img src="images/logo.jpg" alt=""></a>
+        <div class="nav-wrap">
+            <h1>豆瓣读书</h1>
+            <div class="search">
+                <input type="text" placeholder="撒哈拉沙漠">
+                <button><i class="iconfont">&#xe631;</i></button>
+            </div>
+        </div>
+        <div class="nav-primary">
+                <a href="#">购书单</a>
+                <a href="#">电子图书</a>
+                <a href="#">豆瓣图书</a>
+                <a href="#">2018年度榜单</a>
+                <a href="#">2018书影音报告</a>
+                <a href="#"><i class="iconfont">&#xe60a;</i> 购物车</a>
+        </div>
+    </div>
+    <div class="container center">
+        <div class="container-book">
+           <h1>搜索 撒哈拉沙漠</h1>
+           <h4><a href="#">[丛书] 撒哈拉蔷薇</a></h4>
+           <h6>耕林 / 共三册 / 2012年出版</h6>
+           <div id="book">
+           </div>
+        </div>
+        <div class="container-detail">
+            <p>添加豆瓣没有的图书······</p>
+            <ul>
+                <li><a href="#">>添加书籍 撒哈拉沙漠</a></li>
+                <li><a href="#">>添加杂志 撒哈拉沙漠</a></li>
+                <li><a href="#">>添加丛书 撒哈拉沙漠</a></li>
+            </ul>
+            <p>相关搜索······</p>
+            <ul>
+                <li><a href="#">>搜索"撒哈拉沙漠"的电影</a></li>
+                <li><a href="#">>搜索"撒哈拉沙漠"的音乐</a></li>
+                <li><a href="#">>搜索"撒哈拉沙漠"的舞台剧</a></li>
+            </ul>
+            <img src="images/image.jfif" alt="">
+            <a href="#">>对搜索不满意？给我们反馈</a>
+            <h6>OpenSearch:RSS 2.0</h6>
+        </div>
+        <div class="container-pages">
+            <button><前页</button>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <button>后页></button>
+        </div>
+    </div>
+    <div class="foot center">
+        <div class="foot-copy">
+            <span>© 2005－2019 douban.com, all rights reserved 北京豆网科技有限公司</span>
+        </div>
+        <div class="foot-nav">
+            <a href="#">关于豆瓣</a>
+            <a href="#">在豆瓣工作</a>
+            <a href="#">联系我们</a>
+            <a href="#">法律声明</a>
+            <a href="#">帮助中心</a>
+            <a href="#">移动应用</a>
+            <a href="#">豆瓣广告</a>
+        </div>
+    </div>
+    <script>
+        var url="https://douban.uieee.com/v2/book/search?q=撒哈拉沙漠";
+        $.ajax({
+            url,
+            type:"get",
+            dataType:"jsonp",
+            success:res=>{
+                var books=res.books;
+                var readbooks=[];
+                for(var i=0;i<books.length;i++){
+                    var obj={}
+                    obj.imgUrl=books[i].images.small;
+                    obj.title=books[i].title;
+                    obj.average=books[i].rating.average;
+                    obj.numRaters=books[i].rating.numRaters;
+                    obj.author=books[i].author;
+                    obj.publisher=books[i].publisher;
+                    obj.pubdate=books[i].pubdate;
+                    obj.price=books[i].price;
+                    readbooks.push(obj)
+                }
+                for(var j=0;j<readbooks.length;j++){
+                    var list=$(`<div>
+                             <img src="${readbooks[j].imgUrl}" />
+                             <div>
+                             <p><a>${readbooks[j].title}</a></p>
+                             <p><span>${readbooks[j].average}</span>                            
+                             <span>(${readbooks[j].numRaters}人评价)</span></p>
+                             <p><span>${readbooks[j].author} /</span>
+                             <span>${readbooks[j].publisher} /</span>
+                             <span>${readbooks[j].pubdate} /</span>
+                             <span>${readbooks[j].price} </span></p>
+                             </div>
+                             </div>`)
+                    $("#book").append(list)
+                }
+
+            }
+        })
+    </script>
+</body>
+</html>

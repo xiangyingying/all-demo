@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/网易云.css">
+    <script src="lib/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <img src="images/5-121204193Q8.gif" alt="">
+    </div>
+    <div class="container center">
+        <div id="content" class="center"></div>
+    </div>
+    <script>
+         url="https://music.aityp.com/program/recommend?limit=30";
+         $.ajax({
+             url,
+             type:"get",
+             dataType:"json",
+             success:res=>{
+                 $("#loading").hide()
+                 var programs=res.programs;
+                 var songs=[];
+                 for(var i=0;i<programs.length;i++){
+                     var obj={};
+                     obj.imgUrl=programs[i].blurCoverUrl;
+                     obj.name=programs[i].name;
+                     obj.byname=programs[i].radio.name;
+                     obj.listenerCount=programs[i].listenerCount;
+                     obj.likedCount=programs[i].likedCount;
+                     obj.category=programs[i].radio.category;
+                     songs.push(obj)
+                     console.log(songs)
+                 }
+                 for(var j=0;j<songs.length;j++){
+                     var item=$(`<div>
+                                 <img src="${songs[j].imgUrl}" />
+                                 <div id="list">
+                                 <span><a>${songs[j].name}</a></span>
+                                 <span><a>${songs[j].byname}</a></span>
+                                 <span>播放${songs[j].listenerCount}</span>
+                                 <span>赞${songs[j].likedCount}</span>
+                                 <button>${songs[j].category}</button>
+                                 </div>
+                                 </div>`)
+                    $("#content").append(item)
+                 }
+             },
+             beforeSend:function(){
+                 $("#loading").show()
+             }
+         })
+    </script>
+</body>
+</html>

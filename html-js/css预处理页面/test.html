@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  div { color:blue; }
+  p { color:green; margin:0; }
+  span { color:red; }
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+  <div></div>
+  <p></p>
+  <span></span>
+ 
+<script>
+    var arr = [ "a", "b", "c", "d", "e" ];
+    $("div").text(arr.join(", "));
+ 
+    arr = jQuery.map(arr, function(n, i){
+      return (n.toUpperCase() + i);
+    });
+    $("p").text(arr.join(", "));
+ 
+    arr = jQuery.map(arr, function (a) {
+      return a + a;
+    });
+    $("span").text(arr.join(", "));
+     console.log(arr)
+</script>
+ 
+</body>
+</html>

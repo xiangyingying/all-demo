@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <div class="top">
+        <img src="images/mi-logo.png" alt="">
+        <p>小米商城</p>
+        <p>让每个人都能享受科技的乐趣</p>
+    </div>
+    <div class="container">
+        <img src="images/banner.png" alt="">
+        <div class="table center">
+            <ul>
+                <li class="active">账号登录</li>
+                <!-- <span></span> -->
+                <li>扫码登录</li>
+                <li></li>
+            </ul>
+            <div class="content">
+                <div class="denglu">
+                <div class="account">
+                        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;邮箱/手机号码/小米账号"></<input>
+                        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;密码"></<input>
+                        <input type="submit" value="立即登录"></<input>
+                </div>
+                    <div class="zhuce">
+                            <a href="#">注册小米账号</a>
+                            <span>|</span>
+                            <a href="#">忘记密码？</a>
+                    </div>
+                 
+                    <fieldset class="oth_type_tit">
+                        <legend align="center" class="oth_type_txt">其他方式登录</legend>
+                      </fieldset>
+                 
+                <div class="all-icons">
+                    <a href="#"><span class="qq"></span></a>
+                    <a href="#"><span class="weibo"></span></a>
+                    <a href="#"><span class="pay"></span></a>
+                    <a href="#"><span class="wechat"></span></a>
+                </div>
+            </div>
+            <div class="saoma">
+                <img src="images/二维码.PNG" alt="">
+            </div>
+            </div>
+            </div>
+                <div class="foot">
+                    <a href="#">简体</a>
+                    <span>|</span>
+                    <a href="#">繁体</a>
+                    <span>|</span>
+                    <a href="#">English</a>
+                    <span>|</span>
+                    <a href="#">常见问题</a>
+                </div>
+                <div class="bottom">
+                    <p>小米公司版权所有-京ICP备10046444-<img src="images/捕获.PNG">京公网安备11010802020134号-京ICP证110507号</p>
+                </div> 
+                <script>
+                    $("li").click(function(){
+                        $(this).addClass("active").siblings().removeClass("active")
+            
+                        $(".content>div").eq($(this).index()).show(300).siblings().hide(300)
+                    })
+                </script>   
+</body>
+</html>

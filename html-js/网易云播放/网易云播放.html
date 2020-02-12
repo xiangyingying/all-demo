@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/网易云.css">
+    <script src="lib/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="shou"><img src="images/shou.png" alt=""></div>
+        <div class="pan"><img src="images/pan.png" alt=""></div>
+        <div id="play">
+            <img src="images/播放.png" alt="">
+            <img src="images/暂停按钮.png" alt="">
+        </div>
+    </div> 
+    <script>
+        var index=0;
+       $("#play>img").click(function(){
+           index++;
+           if(index>1){
+               index=0;
+           }
+           $("#play>img").eq(index).show().siblings().hide();
+       })
+      
+    </script>
+</body>
+</html>

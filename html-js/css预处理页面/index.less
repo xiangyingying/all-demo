@@ -1,0 +1,64 @@
+@import "color";
+body{
+    color: #color[fontColor];
+    background: url('images/photo-1497436072909-60f360e1d4b1.jfif') center;
+}
+.content{
+    width: 1000px;
+    margin:0 auto;
+    margin-top:100px;
+    text-align: center;
+}
+a{
+    color: #color[fontColor];
+    text-decoration: none;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.weather img{
+    margin-left: 80px;
+}
+.weather p{
+    margin-top: -5px;
+}
+.time{
+    font-size: 100px;
+}
+span{
+    font-size: 35px;
+}
+h3{
+    font-weight: normal;
+    font-size: 25px;
+}
+.input{
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid #color[fontColor];
+    color: #color[fontColor];
+    background: 0;
+    width: 17.2em;
+}
+.setting{
+    position: absolute;
+    bottom: 20px;
+}
+.todo{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+#checkbox{
+    -webkit-appearance: none;
+    border: none;
+    width: 35px;
+    outline: none;
+}
+#checkbox::after{
+    content: url('images/unsit.png');
+}
+#checkbox:checked::after{
+    content: url('images/sit.png');
+}

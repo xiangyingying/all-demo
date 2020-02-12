@@ -1,0 +1,92 @@
+*{margin: 0;padding: 0}
+body{
+    background: #F5F5F5;
+}
+#loading{
+    position: fixed;
+    top: 0;right: 0;bottom: 0;left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center{
+    margin-left: auto;margin-right: auto;
+}
+.container{
+  width: 983px;
+  background: white;
+  border: 1px solid #dbdbdd;
+}
+#content{
+    width: 900px;
+    border: 1px solid #dbdbdd;
+}
+#content img{
+    width: 40px;height: 40px;
+    float: left;
+    margin-top: 19px;
+    margin-left: 23px;
+}
+#content>div{
+    overflow: hidden;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    height: 60px;width: 900px;
+}
+#content>div:hover{
+    background: #dcdcdc;
+}
+#content>div:nth-child(even){
+    background: #F7F7F7;
+    width: 900px;
+    
+}
+#content>div:nth-child(even):hover{
+    background: #dcdcdc;
+}
+#content>div div{
+    margin-top: 25px;
+    margin-left: 78px;
+}
+#list span:nth-child(1){
+    display: inline-block;
+    width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+}
+#list span:nth-child(2){
+    display: inline-block;
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 20px;
+}
+#list span a{
+    font-size: 12px;
+    color: #333333;
+}
+#list span a:hover{
+    color: black;
+    text-decoration: underline;
+}
+#list span{
+    font-size: 11px;
+    color: #999999;
+}
+#list span:nth-child(3){
+    width: 70px;
+    display: inline-block;
+    margin-right: 54px;
+    padding-top: 5px;
+}
+#list button{
+    background: none;
+    margin-left: 100px;
+    border: 1px solid #999;
+    font-size: 12px;
+    width: 66px;
+    color: #999999;
+}

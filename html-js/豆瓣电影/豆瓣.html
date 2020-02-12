@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/豆瓣.css">
+    <style>
+      .loading{
+          position: fixed;
+          top: 0;right: 0;bottom: 0;left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <img src="images/5-121204193Q8.gif" alt="">
+    </div>
+    <script>
+       var url="https://douban.uieee.com/v2/movie/top250";
+       $.ajax({
+           url,
+           type:"get",
+           dataType:"jsonp",
+           success:res=>{
+               $(".loading").hide() 
+               /* console.log(res.subjects) */
+               var subjects=res.subjects;
+               var movies=[];
+               for(var i=0;i<subjects.length;i++){
+                   var obj={}
+                   obj.title=subjects[i].title;
+                   obj.imagesUrl=subjects[i].images.small;
+                   movies.push(obj)
+               }
+               for(var j=0;j<movies.length;j++){
+                   var item=$(`<div><img src="${movies[j].imagesUrl}" /><p>${movies[j].title}</p></div>`)
+                   $("body").append(item)    
+                }
+           },
+           /* error:err=>{
+               console.log(err.status)
+               if(err.status==404){
+                   window.location.href="404.html"
+               }, */
+            beforeSend:function(){
+                $(".loading").show()
+            }
+       })
+    </script>
+</body>
+</html>

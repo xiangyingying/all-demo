@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <script src="lib/base.js"></script>
+    <style>
+        *{margin: 0;padding: 0}
+        img{
+            width: 240px;
+        }
+        .item{
+            border: 1px solid #eee;
+            padding: 20px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <img src="images/01.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/02.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/03.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/04.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/05.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/06.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/07.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/08.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/09.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/10.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/11.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/12.jpg" alt="">
+        </div>
+    </div>
+    <script>
+         var url = {
+            dataUrl: [{
+                src: "01.jpg"
+            }, {
+                src: "02.jpg"
+            }, {
+                src: "03.jpg"
+            }, {
+                src: "04.jpg"
+            }, {
+                src: "05.jpg"
+            }, {
+                src: "06.jpg"
+            }, {
+                src: "07.jpg"
+            }, {
+                src: "08.jpg"
+            }, {
+                src: "09.jpg"
+            }, {
+                src: "10.jpg"
+            }, {
+                src: "11.jpg"
+            }, {
+                src: "12.jpg"
+            }]
+        }
+        window.onload=function(){
+            place_img();
+            $(window).scroll(function(){
+                if(onReachBottom()){
+                    url.dataUrl.forEach(item=>{
+                        var list=`<div class="item"><img src="images/${item.src}" /></div>`
+                        $(".container").append(list)
+                        place_img()
+                    })
+                }
+            })
+        }
+        function place_img(){
+            var ww=$(window).width();
+            var itemWidth=$(".item").outerWidth();
+            var num=Math.floor(ww/itemWidth)
+            console.log(num)
+            var heightArr=[];
+            $(".item").each((index,item)=>{
+                if(index<num){
+                    var itemHeight=$(item).outerHeight();
+                    heightArr.push(itemHeight)
+                }else{
+                    var minHeight=Math.min(...heightArr)
+                    var minIndex=heightArr.indexOf(minHeight)
+                    var offsetLeft=$(".item").eq(minIndex).offset().left;
+                    $(".item").eq(index).css({position:'absolute',top:minHeight,left:offsetLeft})
+                    heightArr[minIndex]=minHeight+$(".item").eq(index).outerHeight()
+                }
+            })
+        }
+    </script>
+</body>
+</html>

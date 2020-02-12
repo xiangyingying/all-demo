@@ -1,0 +1,47 @@
+*{margin: 0;padding: 0}
+.content{
+    width: 400px;height: 400px;
+    margin:40px auto;
+    position: relative;
+}
+.shou{
+    position: absolute;
+    top: 0;left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+.shou img{
+    width: 100px;height: 150px;
+}
+.pan{
+    position: absolute;
+    top: 22%;left: 20%; 
+}
+.pan img{
+    width: 200px;height: 200px;
+    animation: animated 2s linear infinite;
+    animation-play-state: paused;
+}
+@keyframes animated{
+    0%{
+        transform: rotate(0deg)
+    }
+    50%{
+        transform: rotate(180deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+.pan img:hover{
+    animation-play-state: running;
+}
+#play img{
+    width: 50px;height: 50px;
+    position: absolute;
+    top:41%;left: 39%;
+    z-index: 110;
+}
+#play img:last-child{
+    display: none;
+}

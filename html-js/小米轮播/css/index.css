@@ -1,0 +1,66 @@
+*{margin:0;padding:0}
+.banner{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width:990px;
+    height: 420px;
+    border:1px solid #666;
+    overflow: hidden;
+    position: relative;
+}
+.banner img{
+    position: absolute;
+    width: 990px;
+    height: 420px;
+}
+.banner img:nth-of-type(1){
+    z-index:100;
+}
+button{
+    position: absolute;
+    width:40px;
+    height: 70px;
+    cursor: pointer;
+    background:url('../images/icon-slides.png');
+    z-index: 200;
+    border: none;
+}
+.position-center-y{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.prev{
+    background-position-x: -83px;
+}
+.next{
+    right: 0;
+    background-position-x: -126px;
+}
+.prev:hover{
+    background-position-x: -166px;
+}
+.next:hover{
+    background-position-x: -43px;
+}
+.all-icons{
+    position: absolute;
+    z-index:103;
+    right: 3%;
+    transform: translate(-3%);
+    bottom: 20px;
+}
+.all-icons span{
+    display:inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 5px;
+    width:7px;
+    height: 7px;
+    border: 2px solid #AAAEB1;
+    background-color: gray;
+}
+.all-icons .active{
+    background:#F3F6F8;
+}

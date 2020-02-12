@@ -1,0 +1,182 @@
+*{margin:0;padding:0}
+.top{
+    height: 97px;
+    line-height: center;
+    position: relative;
+}
+li{
+    list-style: none;
+}
+.top img{
+    margin-top: 25px;
+    width: 47px;height: 47px;
+    margin-left: 276px;
+    background-color:#F56600; 
+    border: 1px solid white;
+}
+.top p{
+    position: absolute;
+    top:15px;
+    left:345px; 
+}
+.top p:nth-of-type(1){
+    font-size: 35px;
+    font-family:"AustralianFlyingCorpsStencil";
+}
+.top p:last-child{
+    font-size: 8px;
+    margin-top: 45px;
+    color: #707070;
+}
+.container{
+    height: 410px;
+    position: relative;
+}
+.container img{
+    height: 410px;
+    width: 100%;
+}
+.container::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+.table{
+    position: absolute;
+    top: 21px;right:282px;
+    width: 280px;
+    height: 365px;
+    background: white;
+
+}
+ .table li:nth-child(3){
+    border: 1px solid #C5C0B4;
+    height: 18px;
+    margin-top: 20px;
+    margin-left: -103px;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 30px;
+    font-size: 20px;
+}
+.account{
+    margin-top: 20px;
+    margin-left: 23px;
+}
+.account input{
+    width: 234px;
+    height: 34px;
+    border: 1px solid #C5C0B4;
+    outline: none;
+}
+.account input:first-child{
+    margin-bottom: 12px;
+}
+.account input:nth-child(3){
+    margin-top: 16px;
+    margin-bottom: 14px;
+    color: white;
+    background-color: #F56600;
+}
+.zhuce{
+    margin-left:77px; 
+}
+.zhuce span,.zhuce a{ 
+    margin-right: 7px;
+    font-size: 4px;
+    color: #ACA9B7;
+}
+a{
+    text-decoration: none;
+    color:#747474;
+    font-size: 6px;
+}
+.oth_type_tit {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    font-size: 6px;
+    margin-top: 50px;
+    color: #aca9b7;
+    width: 230px;
+    margin-left: 25px;
+}
+fieldset, img {
+    border: 0;
+}
+.all-icons{
+    text-align: center;
+    margin-left: 40px;
+    width:240px;
+    margin-top: 10px;
+}
+.all-icons a{
+    position: relative;display: inline-block;
+    width: 25px;height: 25px;border-radius: 50%;
+    background:#747474;
+    margin-right:30px; 
+}
+.all-icons span{
+    position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);
+    display: inline-block;
+    width: 18px;height: 18px;
+    background: url('../images/icons_type.png');
+}
+.all-icons .qq{
+    background-position-x: -19px;
+}
+.all-icons .weibo{
+    background-position-x: -38px;
+}
+.all-icons .pay{
+    width:26px;
+    background-position-x: -55px;
+}
+.all-icons .wechat{
+    width: 21px;
+    background-position-x: -85px;
+}
+.foot{
+    margin-left: 590px;
+    margin-top: 60px;
+}
+.bottom img{
+    width:15px;height: 15px;
+}
+.foot span{
+    color: #747474;
+    height: 6px;
+    display: inline-block;
+    margin-right: 7px;
+}
+.bottom p{
+    display:inline-block;
+    font-size: 6px;
+    color: #747474;
+    margin-top: 14px;
+    margin-left: 498px;
+    margin-bottom: 70px;
+}
+.saoma{
+    display: none;
+}
+.saoma img{
+    margin-top:50px;margin-left: 50px;
+    width: 200px;
+    height: 200px;
+}
+.content>div{
+    position: absolute;
+}
+.active{
+    color:orangered;
+}
+.content{
+    position: relative;
+}

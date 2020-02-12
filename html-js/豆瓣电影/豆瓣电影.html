@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <script src="lib/http.js"></script>
+    <style>
+       #container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 770px;
+            margin:30px auto;
+        }
+        img{
+         width: 149px;height: 220px;
+         margin-top:12px;margin-left: 12px; 
+      }
+      #container div{
+        width:170px;height: 260px;
+        margin-right: 21px;
+        margin-bottom: 21px;
+        box-shadow: 2px 1px 6px 3px rgb(175,175,175);
+}
+      p{
+        margin-top: -3px;margin-left: 12px; 
+      }
+      #loading{
+          position: fixed;
+          top: 0;bottom: 0;
+          left:0;right: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      #loading img{
+          width: 200px;height: 200px;
+      }
+    </style>
+</head>
+<body>
+        <div id="loading">
+            <img src="images/5-121204193Q8.gif" alt="">
+        </div>
+   <div id="container"></div>
+    <script>
+       var start=0;
+       http({
+           data:{
+               start
+           },
+           callback:handleData
+       })
+       function handleData(res){
+           var subjects=res.subjects;
+           var movies=[];
+           for( var i=0;i<subjects.length;i++){
+               var obj={}
+               obj.title=subjects[i].title;
+               obj.imageUrl=subjects[i].images.small;
+               movies.push(obj)
+           }
+           for(var j=0;j<movies.length;j++){
+               var item=$(`<div><img src="${movies[j].imageUrl}" /><p>${movies[j].title}</p></div>`)
+               $("#container").append(item)
+           }
+           $(window).scroll(function(){
+               if(onReachBottom()){
+                   start+=20;
+                   http({
+                       data:{
+                           start
+                       },
+                       callback:handleData
+                   })
+               }
+        })
+       }
+     /*  <div id="app">
+
+        </div>
+        <script>
+       var start = 0;
+       http({
+           data: {
+               start
+           },
+           callback: handleData
+       })
+
+       function handleData(res) {
+           var subjects = res.subjects;
+           var movies = [];
+           for (var i = 0; i < subjects.length; i++) {
+               var obj = {}
+               obj.title = subjects[i].title;
+               obj.imageUrl = subjects[i].images.small;
+               movies.push(obj)
+           }
+
+           for (var j = 0; j < movies.length; j++) {
+               var item = $(`<div class="item"><img src="${movies[j].imageUrl}"/><p>${movies[j].title}</p></div>`)
+               $("#app").append(item)
+           }
+
+           $(window).scroll(function(){
+               if(onReachBottom()){
+                   start+=20;
+                   http({
+                       data:{
+                           start
+                       },
+                       callback:handleData
+                   })
+               }
+           })
+       } */
+    </script>
+</body>
+</html>

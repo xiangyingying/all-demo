@@ -1,0 +1,247 @@
+*{margin: 0;padding: 0;}
+a{
+    color: #d5d5d5;
+    text-decoration: none;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+.top{
+    line-height: 27px;width: 100%;
+    background: #535551;
+    font-size: 12px;
+    position: relative;
+}
+.top a:hover{
+    color: white;
+}
+.top-left{
+    margin-left:11px;
+ }
+.top-left a{
+    margin-right:20px; 
+}
+.top-right{
+    position: absolute;
+    right: 23px;top: 0;
+}
+.top-right a{
+    margin-left: 26px;
+}
+.nav{
+    background: #F6F6F1;
+    height: 115px;
+    position: relative;
+}
+.nav img{
+    position: absolute;
+    top: 27px;right: 273px;
+}
+.nav-wrap{
+    line-height: 75px;
+    border: 1px solid #e5ebe4;
+    font-size: 15px;
+    color: #5D442D;
+    position: relative;
+}
+.nav-wrap h1{
+    margin-left: 151px;
+}
+.nav-wrap .search{
+    position: absolute;
+    top: 20px;left: 310px;
+    width: 484px;line-height: 30px;
+    background: white;
+    border-bottom:1px solid #D1D1D1;
+    border-radius: 3px;
+}
+.search input{
+    line-height: 30px;width: 426px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+}
+.search input::-webkit-input-placeholder{
+    font-size: 12px;
+    color: black;
+}
+.search button{
+    width: 38px;height: 34px;
+    background: #9F9D94;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+.search button i{
+    color: white;
+}
+.nav-primary{
+    margin-left: 154px; 
+    line-height: 40px;
+}
+.nav-primary a{
+    color: #614E3C;
+    margin-right: 25px;
+    font-size: 14px;
+}
+.nav-primary a:hover{
+    color: white;
+    background: #5D442D;
+}
+.container{
+    position: relative;
+    width: 1040px;
+}
+/* .container-book{
+    width: 605px;
+} */
+.container-book h1{
+    font-size: 26px;
+    color: #494949;
+    margin: 40px 0;
+}
+.container-book h4 a:hover{
+     color: white;
+     background: #3377AA;
+     cursor: pointer;
+}
+.container-book h4 a{
+    display: inline-block;
+    font-size: 14px;
+    color: #3377AA;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+.container-book h6{
+    color: #999999;
+    font-weight: normal;
+}
+#book{
+    overflow: hidden;
+}
+#book img{
+    width: 66px;height: 90px;
+    float: left;
+}
+#book>div{
+    overflow: hidden;
+    margin:25px 0 20px 0;
+}
+#book>div div{
+    padding-left: 80px;
+}
+#book>div div a{
+    color: #3377AA;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#book>div div a:hover{
+    background: #3377AA;
+    color: white;
+    cursor: pointer;
+}
+#book>div div p span{
+    font-size: 12px;
+}
+#book>div div p:nth-child(2) span:first-child{
+    color: #FFAC2D; 
+}
+#book>div div p:nth-child(3) span{
+    color:  #A6A6A6;
+}
+li{
+    list-style: none;
+}
+.container-detail{
+    position: absolute;
+    top: 25px;right: 0;
+    width: 302px;
+}
+.container-detail p{
+    color: #007722;
+    font-size: 14px;
+    margin-bottom: 15px;margin-top: 36px;
+}
+.container-detail li{
+    line-height: 26px;
+    text-align: left;
+}
+.container-detail li a{ 
+    color: #3377AA;
+    font-size: 12px;
+}
+.container-detail img{
+    margin:20px 0;
+}
+.container-detail a{
+    display: inline-block;
+    font-size: 14px;
+    color: #3377AA;
+}
+.container-detail a:hover,.foot-nav a:hover,.container-pages a:hover{
+    background: #3377AA;
+    cursor: pointer;
+    color: white;
+}
+.container-detail h6{
+    color: #BBBBBB;
+    font-size: 12px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+.container-detail h6:hover{
+    background: rgb(114, 31, 31);
+    color: white;
+    width: 120px;
+}
+.container-pages{
+    margin-left: 189px;
+    line-height: 140px;
+    
+}
+.container-pages button{
+    border: none;
+    background: none;
+    color: #AAAAB2;
+    margin: 0 20px;
+    font-size: 14px;
+}
+.container-pages button:nth-of-type(2){
+    color: #3377AA;
+}
+.container-pages button:nth-of-type(2):hover{
+    color: white;
+    background: #3377AA;
+    cursor: pointer;
+}
+.container-pages a{
+    display: inline-block;
+    color: #3377AA;
+    width: 15px;line-height:15px;
+    text-align: center;
+    font-size: 13px;
+}
+.container-pages .active{
+    background: #83BF73;
+    color: white;
+} 
+.foot{
+    width: 1042px;
+    border-top: 1px dashed #999999;
+    position: relative;  
+}
+.foot-copy span{
+    color: #999999;
+    font-size: 10px;
+}
+.foot-nav{
+    position: absolute;
+    top: 0;right: 0;
+}
+.foot-nav a{
+    color: #3377AA;
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 13px;
+}

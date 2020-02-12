@@ -1,0 +1,269 @@
+*{margin: 0;padding: 0}
+a{
+    text-decoration: none;
+    color: #CCCCCC;
+}
+body{
+    background: #F5F5F5;
+}
+.wy-center{
+    margin-left: auto;margin-right: auto;
+}
+.top{
+    background: #242424;
+    width: 100%;
+    position: relative;
+    line-height: 69px;
+}
+.top-left{
+    width: 750px;
+    margin-left: 90px;
+    position: relative;
+    overflow: hidden;
+}
+.top a{
+    display:inline-block;
+    font-size: 14px;
+    text-align: center;
+    padding:0 20px;margin: 0 -3px;
+}
+.top a:first-child{
+    width: 165px;
+    font-size: 22px;font-family: Cambria, Cochin, Georgia, Times, Times New Roman, 'serif';
+    color: white;
+    border:none;
+}
+.top img{
+    float: left;
+    margin-top: 18px;
+}
+.top a:not(:first-child):hover{
+    background: #000000;color: white;
+}
+.hot img{
+    position: absolute;
+    top: 0;right: 16px;
+    color: white;background: #C20C0C;
+    border: 1px solid #242424;
+    border-radius: 10px;
+    width: 27px;
+    line-height: 15px;text-align: center;
+    font-size: 12px;
+}
+.search{
+    position: absolute;
+    top: 0;right:140px;
+    width: 335px;
+}
+.search .btn{
+    position: absolute;
+    left: 0;top: 20px;
+    width: 129px;height: 32px;
+    border: 1px solid #242424;
+    border-radius: 30px;
+    padding-left: 30px;
+    outline: none;
+    background: white;
+    overflow: hidden;
+}
+.search input{
+    position: absolute;
+    left: 0;top: 0;
+    width: 125px;height: 33px;
+    border: none;
+    padding-left: 30px;
+    outline: none;
+}
+.search>i:first-child{
+    position: absolute;
+    left: 10px;top: 4px;
+    color: #8B8B8B;
+    z-index: 100;
+}
+.search i:nth-of-type(2){
+    position: absolute;
+    right: 0;top: 0;
+    color: #454545;
+}
+.search button:nth-of-type(1){
+    background: #242424;
+    color: #CCCCCC;
+    border: 1px solid #454545;
+    font-size: 12px;
+    border-radius: 30px;
+    width: 90px;height: 32px;
+    position: absolute;
+    left: 175px;top: 20px;
+    outline: none;
+}
+.search button:nth-of-type(1):hover{
+    border:1px solid #CCCCCC;
+    cursor: pointer;
+}
+.search button:nth-of-type(2){
+    background: #242424;color: #787878;
+    border: none;outline: none;
+    position: absolute;
+    right: 27px;top: 26px;
+    width: 30px;
+}
+.search button:nth-of-type(2):hover{
+    color: #8B8B8B;
+    text-decoration: underline;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+/* 登录下拉框 */
+.drop-down{
+    width: 160px;height: 200px;
+    background: #2B2B2B;
+    position: absolute;
+    top: 32px;right:-67px;
+    z-index: 150;
+    display:none;
+}
+/* 小三角 */
+.drop-down::after{
+    content: "";
+    display: block;
+    width: 0;height: 0;
+    position: absolute;
+    border: 9px solid transparent;
+    border-bottom-color: #2B2B2B;
+    left: 50%;top: -18px;
+    transform: translate(-50%);
+}
+.drop-down li{
+    line-height: 38px;
+    border-bottom: black;
+    color: #ADAEAD;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 12px;
+}
+.drop-down li i{
+    font-size: 16px;
+    text-align: left;
+   margin-right: 15px;
+}
+.drop-down li:hover{
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+.search button:nth-of-type(2):hover .drop-down{
+    display: block;
+}
+.line{
+    height: 5px;width: 100%;
+    background: #C20C0C;
+}
+.container{
+    width: 982px;
+    border: 1px solid #dbdbdb;
+    background: white;
+}
+#songs-find{
+     font-size: 12px;
+     color: #999999;
+     margin-top: 20px;
+     display: block;
+}
+.content{
+    width: 902px;
+}
+li{
+    list-style: none;
+}
+li a{
+    color: #333333;
+}
+.list-item{
+    margin-bottom: 10px;
+}
+.list-item li{
+    float: left;
+    width: 113px;height: 40px;
+    line-height: 40px;text-align: center;
+    font-size: 14px;
+    border-top:2px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    margin-left: -1px;
+}
+.list-item li:hover{
+    border-top: 2px solid #C20C0C;
+}
+.list-item ul{
+    width: 898px;
+    overflow: hidden;
+    margin-top: 20px;
+    background: #F8F8F8;  
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+.list-item .active{
+    border-top: 2px solid #C20C0C;
+    border-bottom: none;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+
+#songs-list>div{
+    padding: 10px 0;
+    border: 1px solid white;
+}
+#songs-list>div:nth-child(even){
+    background:#F7F7F7;
+    border: 1px solid white;
+}
+#songs-list>div:nth-child(even):hover,#songs-list>div:hover{
+    background: #f3f3f3;
+    border: 1px solid #ebebeb;
+}
+#songs-list span a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#songs-list span a{
+    font-size: 12px;
+    color: #333333;
+}
+#songs-list span{
+    display: inline-block;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#songs-list span:nth-of-type(1){
+    width: 330px;  
+} 
+#songs-list span:nth-of-type(2){
+    width: 120px;
+    margin-left: 20px;
+}
+#songs-list span:nth-of-type(3){
+    width: 150px;
+}
+#songs-list span:nth-of-type(4){
+    width: 160px;
+}
+#songs-list span:not(:nth-of-type(1)) i{
+    display: none;
+    float: left;
+    font-weight: bold;
+}
+#songs-list i{
+    margin-left: 10px;
+    color: #999999;
+}
+#songs-list i:hover{
+    color: black;
+    cursor: pointer;
+}
+#songs-list div:hover span:nth-of-type(2) i{
+    display:block;
+}
+

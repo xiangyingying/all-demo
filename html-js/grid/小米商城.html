@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            height: 1500px;        
+        }
+        *{margin: 0;padding: 0}
+        .container{
+             width:1000px;
+             margin:20px auto;
+             display: grid;
+             grid-template-columns:620px 310px;
+             grid-template-rows: repeat(3,322px);     
+         }
+         .item{
+             border: 1px solid #333;
+             margin-left: -1px;margin-top: -1px;
+             display: grid;
+             grid-template-columns: 310px 310px;
+         }
+         .col{
+             border-right: 1px solid #333;
+             display: grid;
+             grid-template-rows: 161px 161px;          
+         }
+         .row{
+             border: 1px solid #333;
+             margin-top: -1px;
+             margin-left: -1px;
+             margin-right: -1px;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">        
+        </div>
+        <div class="item">
+           
+        </div>
+        <div class="item">
+          <div class="col">
+               <div class="row"></div>
+           </div>
+        </div>
+        <div class="item">
+           
+        </div>
+        <div class="item">
+           <div class="col"></div>
+        </div>
+        <div class="item">
+           
+        </div>
+    </div>
+</body>
+</html>

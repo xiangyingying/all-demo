@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/网易云搜索.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1291009_ygfippca33q.css">
+    <script src="lib/jquery-3.4.1.js"></script>
+    <script src="lib/http.js"></script>
+</head>
+<body>
+   <div class="top">
+        <div class="top-left">
+           <a href="#"><img src="images/logo.png" alt=""><span>网易云音乐</span></a>
+           <a href="#">发现音乐</a>
+           <a href="#">我的音乐</a>
+           <a href="#">朋友</a>
+           <a href="#">商城</a>
+           <a href="#">音乐人</a>
+           <a href="#">下载客户端</a>
+           <div class="hot"><img src="images/hot.png" alt=""></div>
+        </div>   
+       <div class="search">
+           <i class="iconfont">&#xe631;</i>
+           <div class="btn" id="btn">
+               <input type="text" id="input" value="你的名字">
+           </div>  
+           <button>创作者中心</button>
+           <button>登录
+               <div class="drop-down">
+                   <ul>
+                       <li><i class="iconfont">&#xe60c;</i>手机号登录</li>
+                       <li><i class="iconfont">&#xe614;</i>微信登录</li>
+                       <li><i class="iconfont">&#xe68c;</i>QQ登录</li>
+                       <li><i class="iconfont">&#xe63d;</i>新浪微博登录</li>
+                       <li><i class="iconfont">&#xe659;</i>网易邮箱账号登录</li>
+                   </ul>
+               </div>
+           </button>
+           <i class="iconfont">&#xe666;</i>
+       </div>
+   </div>
+   <div class="line"></div>
+   <div class="container wy-center">
+       <div class="content wy-center">
+            <div id="songs-find">
+                    <label>搜索" ",找到10首单曲</label>
+            </div>
+            <div class="list-item">
+                <ul>
+                    <li class="active"><a href="#">单曲</a></li>
+                    <li><a href="#">歌手</a></li>
+                    <li><a href="#">专辑</a></li>
+                    <li><a href="#">视频</a></li>
+                    <li><a href="#">歌词</a></li>
+                    <li><a href="#">歌单</a></li>
+                    <li><a href="#">主播电台</a></li>
+                    <li><a href="#">用户</a></li>
+                </ul>
+            </div>
+            <div id="songs-list" class="wy-center">
+            </div>
+       </div>      
+   </div>
+   
+   <script>
+       var value=$("input").val();
+       var data={value}
+       data.value=this.value;
+       http({
+           callback:handleData,
+           data,
+       })
+       function handleData(res){
+           var songs=res.result.songs;
+           songs.forEach(item=>{
+               var element=`<div>
+                            <i class="iconfont">&#xe6cd;</i>
+                            <span><a>${item.name}</a></span>
+                            <span><i class="iconfont">&#xe618;</i>
+                                  <i class="iconfont">&#xe617;</i>
+                                  <i class="iconfont">&#xe687;</i>
+                                  <i class="iconfont">&#xe63b;</i>
+                            </span>
+                            <span><a>${item.artists[0].name}</a></span>
+                            <span><a>${item.album.name}</a></span>
+                            <span>${time(item.duration)}</span>
+                            </div>`
+               $('#songs-list').append(element)
+           })
+       }
+       $("input").keydown(function(event){
+           if(event.keyCode==13){
+               data.value=this.value              
+               http({
+                   callback:handleData,
+                   data,            
+               })   
+            }
+    })
+
+   </script>
+</body>
+</html>

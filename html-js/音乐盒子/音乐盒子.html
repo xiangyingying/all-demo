@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <!-- <canvas id="canvas"></canvas> -->
+    <div class="content">
+        <div class="search">
+        <input type="text" v-model="keyword"><button @click="handleClick">搜索音乐</button>
+        </div>
+        <img src="images/music.jpg" alt="">
+        <h4>成都</h4>
+        <audio :src="musicUrl" controls loop autoplay></audio>
+    </div>
+    <!-- <script>
+    new Vue({
+        el:"#app",
+        data:{
+            keyword:"成都",
+            id:"",
+            musicUrl:"",
+            isPlaying:true
+        },
+        method:{
+            handleClick(){
+                var keyword=this.keyword;
+                axios.get(`http://music.aityp.com/search?keyword=${keyword}&limit=1`).then(res=>{
+
+                })
+            }
+        }
+    })
+    </script> -->
+</body>
+</html>

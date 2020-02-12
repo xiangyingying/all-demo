@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/华语音乐.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1291009_y0ppa50fun.css">
+</head>
+<body>
+    <div class="fixed-top">
+        <i class="iconfont">&#xe95a;</i>
+        <p>top</p>
+    </div>
+    <div class="top">
+         <div class="top-left">
+            <a href="#"><img src="images/logo.png" alt=""><span>网易云音乐</span></a>
+            <a href="#" class="active">发现音乐</a>
+            <a href="#">我的音乐</a>
+            <a href="#">朋友</a>
+            <a href="#">商城</a>
+            <a href="#">音乐人</a>
+            <a href="#">下载客户端</a>
+            <div class="hot"><img src="images/hot.png" alt=""></div>
+         </div>   
+        <div class="search">
+            <i class="iconfont">&#xe631;</i>
+            <div class="btn" id="btn">
+                <input type="text" id="input" placeholder="音乐/视频/电台/用户">
+            </div>  
+            <button>创作者中心</button>
+            <button>登录
+                <div class="drop-down">
+                    <ul>
+                        <li><i class="iconfont">&#xe60c;</i>手机号登录</li>
+                        <li><i class="iconfont">&#xe614;</i>微信登录</li>
+                        <li><i class="iconfont">&#xe68c;</i>QQ登录</li>
+                        <li><i class="iconfont">&#xe63d;</i>新浪微博登录</li>
+                        <li><i class="iconfont">&#xe659;</i>网易邮箱账号登录</li>
+                    </ul>
+                </div>
+            </button>
+            <i class="iconfont">&#xe666;</i>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav-content wy-center">
+            <a href="#">推荐</a>
+            <a href="#">排行榜</a>
+            <a href="#">歌单<i></i></a>
+            <a href="#">主播电台</a>
+            <a href="#">歌手</a>
+            <a href="#">新碟上架</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content wy-center">
+             <div class="content-nav wy-center">
+                 <div class="lang">
+                     <span>华语</span>
+                     <button>选择分类<i class="iconfont">&#xe797;</i></button>
+                 </div>
+                 <button class="hot">热门</button>
+             </div>
+             <div class="music wy-center" id="music">
+
+             </div>
+             <div class="pages wy-center">
+                  <button class="select"><i class="iconfont">&#xe60e;</i>上一页</button>
+                  <a href="#" class="active">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">7</a>
+                  <a href="#">8</a>
+                  <a href="#">···</a>
+                  <a href="#">38</a>
+                  <button>下一页<i class="iconfont">&#xe601;</i></button>
+             </div>
+        </div>
+    </div>
+    <div class="foot">
+         <div class="foot-content wy-center">
+             <div class="copy">
+                 <a href="#">服务条款</a>
+                 <span>|</span>
+                 <a href="#">隐私政策</a>
+                 <span>|</span>
+                 <a href="#">版权投诉问题</a>
+                 <span>|</span>
+                 <a href="#">意见反馈</a>
+                 <span>|</span>
+                 <p>网易公司版权所有©1997-2019 &nbsp;&nbsp;&nbsp;杭州乐读科技有限公司运营：浙网文[2018]3506-263号</p>
+                 <p><span>违法和不良信息举报电话：0571-89853516</span>  &nbsp;&nbsp;&nbsp;<span>举报邮箱：ncm5990@163.com</span></p>
+             </div>
+             <div class="img">
+                 <ul>
+                    <li><img src="images/用户认证.JPG" alt="">
+                         <span>用户认证</span>
+                    </li>
+                    <li><img src="images/02.JPG" alt="">
+                        <span>独立音乐人</span>
+                   </li>
+                   <li><img src="images/03.JPG" alt="">
+                        <span>赞赏</span>
+                   </li>
+                   <li><img src="images/04.JPG" alt="">
+                         <span>视频奖励</span>
+                    </li>
+                 </ul>
+             </div>
+         </div>
+    </div>
+    <script>
+        $("#btn").click(function(){
+            $("#input").toggle()
+        })
+    
+
+        var url="https://music.aityp.com/top/playlist?cat=华语";
+        $.ajax({
+            url,
+            type:"get",
+            dataType:"json",
+            success:res=>{
+                var playlists=res.playlists;
+                var songs=[];
+                for(var i=0;i<playlists.length;i++){
+                    var obj={}
+                    obj.playCount=playlists[i].playCount;
+                    obj.name=playlists[i].name;
+                    obj.nickname=playlists[i].creator.nickname;
+                    obj.coverImgUrl=playlists[i].coverImgUrl;
+                    songs.push(obj)
+                }
+                for(var j=0;j<songs.length;j++){
+                    var lead=$(`<div><img src="${songs[j].coverImgUrl}" /><p>${songs[j].playCount}</p><p>${songs[j].name}</p>
+                                 <p> by ${songs[j].nickname}</p></div>`)
+                    $(".music").append(lead)
+                }
+            }
+        })
+    
+        $(window).scroll(function(){
+            var scrollTop=$(window).scrollTop();
+            var opacity=scrollTop/200;
+            if(opacity>1){
+                opacity=1
+            }
+            $(".fixed-top").css({opacity:opacity})
+        })
+    </script>
+</body>
+</html>

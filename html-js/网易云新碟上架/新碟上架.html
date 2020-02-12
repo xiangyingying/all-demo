@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/新碟上架.css">
+    <script src="lib/jquery-3.4.1.js"></script>
+    <script src="lib/http.js"></script>
+</head>
+<body>
+    <div class="container center">
+        <div class="container-nav center">
+                <a href="#">全部新碟</a>
+                <a href="#">全部</a>
+                <span>|</span>
+                <a href="#">华语</a>
+                <span>|</span>
+                <a href="#">欧美</a>
+                <span>|</span>
+                <a href="#">韩国</a>
+                <span>|</span>
+                <a href="#">日本</a>
+                <span>|</span>
+        </div>
+        <div id="content" class="center"></div>
+    </div>
+    <script>
+         var start=0;
+         http({
+             data:{
+                 start
+             },
+             callback:handleData
+         })
+         function handleData(res){
+            var albums=res.albums;
+                 var disces=[];
+                 for(var i=0;i<albums.length;i++){
+                     var obj={};
+                     obj.picUrl=albums[i].picUrl;
+                     obj.name=albums[i].name;
+                     obj.byname=albums[i].artist.name;
+                     disces.push(obj)
+                     console.log(disces)
+                 }
+                 for(var j=0;j<disces.length;j++){
+                     var item=$(`<div>
+                                    <img src="images/bg2.png"> 
+                                    <a><img src="${disces[j].picUrl}" /></a>
+                                    <p>${disces[j].name}</p>
+                                    <p>${disces[j].byname}</p>
+                                  </div>`)
+                    $("#content").append(item)
+                 }           
+                 $(window).scroll(function(){
+                     if(onReachBottom()){
+                         start+=20;
+                         http({
+                             data:{
+                                 start
+                             },
+                             callback:handleData
+                         })
+                     }
+                 })
+             }
+    </script>
+</body>
+</html>
