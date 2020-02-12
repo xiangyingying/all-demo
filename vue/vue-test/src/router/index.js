@@ -1,0 +1,48 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+Vue.use(Router);
+export default new Router({
+    mode:"hash",
+    routes:[
+        {
+            path:"/music",
+            name:"music",
+            component:()=>import('@/views/Music')
+        },
+        {
+            path:"/mv",
+            name:"mv",
+            component:()=>import('@/views/Mv')
+        },
+        {
+            path:"/list",
+            name:"list",
+            component:()=>import('@/views/List')
+        },
+        {
+            path:"/cart",
+            name:"cart",
+            component:()=>import('@/views/Cart')
+        },
+        {
+            path:"/musicDetail",
+            name:"musicDetail",
+            component:()=>import('@/views/MusicDetail')
+        },
+        {
+            path:"/mvDetail",
+            name:"mvDetail",
+            component:()=>import('@/views/MvDetail')
+        },
+        {
+            path:"/banner",
+            name:"banner",
+            component:()=>import('@/views/Banner')
+        },
+        {
+            path:"/text",
+            name:"text",
+            component:()=>import('@/views/Text')
+        },
+    ]
+})
