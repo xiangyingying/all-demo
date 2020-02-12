@@ -1,0 +1,18 @@
+.container{
+  width: 800px;
+  margin: 20px auto;
+}
+.bottom-nav{
+  display: flex;
+  position: fixed;
+  bottom:0;
+  background: #6C8441;
+  z-index: 100;
+  width: 750px;
+  line-height: 50px;
+  margin-bottom: -10px;
+  margin-left: 5px;
+}
+.bottom-nav>li{
+  margin-left: 250px;
+}

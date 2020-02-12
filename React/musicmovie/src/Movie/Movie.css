@@ -1,0 +1,15 @@
+.item img{
+    width: 150px;height: 200px;
+}
+.item{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 800px;
+}
+.item>div{
+    width: 150px;
+}
+.name{
+    width: 150px;
+}

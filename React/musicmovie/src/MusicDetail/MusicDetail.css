@@ -1,0 +1,15 @@
+.content img{
+    width: 200px;height: 250px;
+}
+.content{
+    text-align: center;
+}
+.name{
+    color: #999;
+}
+.desc{
+    font-size: 16px;
+    color: #333;
+    text-indent: 2em;
+    text-align: left;
+}

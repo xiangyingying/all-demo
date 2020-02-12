@@ -1,0 +1,41 @@
+.currentCity{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    height: 10px;
+}
+.icon-sousuo{
+    position: absolute;
+    left: 10px;
+    z-index: 300;
+    top: 15px;
+}
+.search{
+    position: relative;
+    height: 50px;
+    background-color: #eee;
+}
+.inp{
+  padding-left: 30px;  
+  width: 300px;height: 30px;
+  border:1px solid #eee;
+  margin-top: 10px;
+}
+.city{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.pos{
+    padding: 5px;
+    background: #EEE;
+}
+.hot-city span{
+    display: inline-block;
+    padding: 5px;
+    background: #EEE;
+    margin-right: 10px;
+    color: black;
+}
+.hot-city{
+    margin-top: 15px;
+}
