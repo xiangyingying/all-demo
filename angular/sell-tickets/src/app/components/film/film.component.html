@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="nav">  
+       <button class="back" (click)="handleBack()"><i class="iconfont icon-fanhui"></i></button>         
+    </div>          
+    <img class="bg" [src]="img" alt="">
+    <div class="detail">
+        <p class="title">{{title}}</p>
+        <p><span *ngFor="let item of genres">{{item}} | </span></p>
+        <p>{{mainland_pubdate}}上映</p>
+        <p><span>{{countries}}</span> | {{durations}}</p>
+        <p class="summary">{{summary}}</p>
+    </div>
+    <div class="author">
+        <p>演职人员</p>
+        <div class="wrapper">
+            <div class="swiper-img">
+                <div *ngFor="let item of casts">
+                    <img [src]="item.avatars.small" alt="">
+                    <p>{{item.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="photo">
+        <div class="phone-title">
+            <span>剧照</span>
+            <span>全部({{clips.length}})></span>
+        </div>
+        <div class="wrapper">
+            <div class="swiper-img">
+               <img [src]="item.image"  *ngFor="let item of clips">
+            </div>
+        </div>
+    </div>
+    <div class="btn">选座购票</div>
+</div>

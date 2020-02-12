@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      音乐
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="center">
+  <div class="container-flex">
+    <div [routerLink]="['/music-detail',item.id]" routerLinkActive="router-link-active"  *ngFor="let item of playlists">
+      <img [src]="item.coverImgUrl" alt="">
+      <p>{{item.title}}</p>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,9 @@
+<div class="container" *ngFor="let data of subjects" (click)="handleDetail(data.id)">
+    <slot name="icon"></slot>
+    <div class="pic"><img [src]="data.images.small" alt=""></div>
+     <div class="info">
+         <p class="title">{{data.title}}</p>
+         <span class="author">主演：<span *ngFor="let item of data.casts">{{item.name}} /</span></span>
+         <p class="time">时长：{{data.durations[0]}}</p>
+     </div>
+</div>      

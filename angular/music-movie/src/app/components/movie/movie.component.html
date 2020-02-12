@@ -1,0 +1,6 @@
+<div class="container-flex">
+    <div [routerLink]="['/movieDetail',item.id]" *ngFor="let item of subjects" class="item">
+        <img [src]="item.images.small" alt="">
+        <p>{{item.title}}</p>
+    </div>
+</div>

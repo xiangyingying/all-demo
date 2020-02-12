@@ -1,0 +1,31 @@
+<div class="nav">
+    <button>X</button>      
+    <p>当前城市 - 武汉</p>
+</div>
+<div class="search">
+    <i class="iconfont icon-sousuo"></i>
+    <input
+     type="text" placeholder="输入城市名或拼音">
+    <button class="cancel">取消</button>
+</div>
+<div class="city">
+    <div class="position">
+        <p>GPS定位你所在城市</p>
+        <span class="pos">武汉</span>
+    </div>
+    <div class="hot-city">
+        <p>热门城市</p>
+        <div>
+            <span *ngFor="let item of hotCities" (click)="handleChangeCity(item.name)">{{item.name}}</span>
+        </div>        
+    </div>
+    <!-- pipeName为管道修饰符  https://www.yuque.com/aying-iyhqu/zvw9ep/rxsnzk  -->
+    <div *ngFor="let key of cities | pipeName">
+        <div>{{key}}
+            <div *ngFor="let item of cities[key]">
+                <p (click)="handleChangeCity(item.name)">{{item.name}}</p>
+            </div>
+        </div>      
+    </div>
+ </div>
+

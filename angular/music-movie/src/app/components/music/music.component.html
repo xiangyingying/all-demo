@@ -1,0 +1,6 @@
+<div class="container-flex">
+    <div *ngFor="let item of playlists" class="item" (click)="handleDetail(item.id)">
+        <img [src]="item.coverImgUrl" alt="">
+        <p class="name">{{item.name}}</p>
+    </div>
+</div>

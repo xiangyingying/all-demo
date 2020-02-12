@@ -1,0 +1,41 @@
+<div>
+    <div class="nav">
+        <div class="nav-title center">
+          <span>ToDoList</span>
+          <input nz-input placeholder="添加todo" 
+          (keyUp.enter)="handleEnter()"
+          [(ngModel)]="value" />
+        </div>
+    </div>
+    <div class="to-container">
+      <div class="content center">
+        <div class="title">
+          <p>正在进行</p>
+        <span class="num">{{arrList.length-sum()}}</span>
+        </div>
+        <div class="list-f">       
+            <div *ngFor="let item of arrList,let index=index">  
+              <div *ngIf="!item.checked" class="item">
+                  <label nz-checkbox [(ngModel)]="item.checked"></label>   
+                  <span>{{item.name}}</span>
+                  <span class="circle" (click)="handleDelete(index)"><span class="min-circle">-</span></span>
+              </div>       
+            </div>
+        </div>
+
+        <div class="title">
+          <p>已经完成</p>
+          <span class="num">{{sum()}}</span>
+        </div>     
+        <div class="list-s" >
+          <div *ngFor="let item of arrList,let index=index">
+            <div *ngIf="item.checked" class="item">
+                <label nz-checkbox [(ngModel)]="item.checked"></label>
+                <span>{{item.name}}</span>
+                <span class="circle" (click)="handleDelete(index)"><span class="min-circle">-</span></span>
+            </div>      
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

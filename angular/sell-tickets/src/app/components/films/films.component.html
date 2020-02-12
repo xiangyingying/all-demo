@@ -1,0 +1,11 @@
+<nz-carousel [nzEffect]="'fade'" nzAutoPlay>
+    <div nz-carousel-content *ngFor="let index of banners" class="banner">
+      <img [src]="index" alt="">
+    </div>
+ </nz-carousel>
+  <p (click)="handleCity()" class="city" >{{common.defaultCity}}<i class="iconfont icon-xialasanjiao"></i></p>
+  <ul>
+    <li><a [routerLink]="['/films/nowPlaying']" routerLinkActive="router-link-active" >正在热映</a></li>
+    <li><a [routerLink]="['/films/comingSoon']" routerLinkActive="router-link-active" >即将上映</a></li>
+  </ul>
+<router-outlet></router-outlet>

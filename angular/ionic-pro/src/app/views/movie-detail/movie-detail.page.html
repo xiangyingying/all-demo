@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="返回" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>电影详情</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="center">
+  <p>{{title}}<span>({{year}})</span></p>
+  <img [src]="img" alt="">
+  <div>
+      <p>剧情介绍:</p>
+      <p class="summary">{{summary}}</p>
+  </div>
+</ion-content>

@@ -1,0 +1,15 @@
+.router-link-active{
+    color: red;
+}
+.bottom-nav{
+    width: 750px;line-height: 35px;
+    background: white;
+    border:1px solid red;
+    display: flex;
+    justify-content: space-around;
+    left: 50%;
+    position: fixed;
+    transform: translateX(-50%);
+    bottom: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,23 @@
+img {
+  width: 150px;
+  height: 200px;
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 800px;
+  margin: 20px auto;
+}
+
+.item {
+  margin-top: 15px;
+}
+
+.name {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

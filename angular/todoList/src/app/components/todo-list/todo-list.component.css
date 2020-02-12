@@ -1,0 +1,107 @@
+.nav {
+  height: 50px;
+  width: 100%;
+  background: #323232;
+  color: white;
+}
+
+.nav-title {
+  width: 500px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.nav-title span {
+  margin-right: 100px;
+}
+
+.to-container {
+  background: #CDCDCD;
+  height: 575px;
+}
+
+.content {
+  width: 500px;
+}
+
+.title > p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.title {
+  position: relative;
+}
+
+.num {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  background: #E6E6FA;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+
+.list-f, .list-s {
+  line-height: 30px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.list-f > div, .list-s > div {
+  margin-top: 10px;
+  background: white;
+}
+
+.content .list-f > div {
+  border-left: 4px solid #629A9C;
+}
+
+.content .list-s > div {
+  border-left: 4px solid #B3B3B3;
+  opacity: .5;
+}
+
+.item {
+  position: relative;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333;
+  right: 10px;
+}
+
+.min-circle {
+  width: 15px;
+  height: 15px;
+  background: #CDCDCD;
+  right: 2px;
+  color: white;
+  text-align: center;
+  line-height: 10px;
+}
+
+.circle, .min-circle {
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.example-input .ant-input {
+  width: 400px;
+  margin: 0 8px 8px 0;
+}

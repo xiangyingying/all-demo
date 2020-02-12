@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="返回"></ion-back-button>
+    </ion-buttons>
+    <ion-title>音乐详情</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="center">
+  <img [src]="img">
+  <p>{{name}}</p>
+  <div>
+      <p>剧情描述:</p>
+      <p class="desc">{{des}}</p>
+  </div>
+</ion-content>
