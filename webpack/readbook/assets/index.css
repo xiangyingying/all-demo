@@ -1,0 +1,13 @@
+img{
+    width: 200px;height: 200px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: 20px auto;
+    justify-content: space-evenly;
+}
+.item{
+    margin-bottom: 20px;
+}

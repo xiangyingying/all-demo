@@ -1,0 +1,51 @@
+body{
+    background: #eee;
+}
+img{
+    width: 60px;height: 60px;
+    margin-right: 20px;
+}
+.container{
+    width: 750px;
+    margin: 0 auto;
+    background: white;
+    padding: 0 10px;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    align-items: center;
+    border-bottom: 1px solid #eee;width: 732px;
+}
+.name{
+    color: #333333;
+    font-size: 16px;
+}
+.artist{
+    color:#A2A2A2 ;
+    font-size: 14px;  
+}
+.content{
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.play{
+    font-size: 14px;
+    color: #999999;
+    width: 200px;
+    margin-left: 20px;
+}
+.play span{
+    margin-left: 20px;
+}
+button{
+    background: white;
+    border: 1px solid #333;
+    margin-left: 50px;
+}
+
+
+

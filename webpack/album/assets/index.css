@@ -1,0 +1,25 @@
+img{
+    width:180px;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.name{
+    width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.artist{
+    color: #AEAEAE;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.item{
+    margin-bottom: 20px;
+}
+

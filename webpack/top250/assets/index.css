@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width:700px;
+    margin: 0 auto;
+}
+img{
+    width: 130px;
+    height: 170px;
+}
+.item{
+    padding: 10px;
+    box-shadow: 1px 1px 2px 2px rgb(175,175,175);
+    margin-bottom: 20px;
+}
+p{
+    font-size: 16px;
+    height: 10px;
+}
